@@ -1,0 +1,117 @@
+.btn {
+
+    color: #000;
+    border: none;
+    padding: 1em 3em;
+    color: #000;
+    background: #FFD223;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: none;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(13);
+    letter-spacing: 0.05em;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:active,
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+
+
+    &.btn-red {
+        color: #fff;
+        background-color: $red;
+
+        &:hover {
+            background-color: #d31417;
+        }
+    }
+
+    &.btn-gblue {
+        color: #000;
+        background-color: $grayBlue;
+
+        &:hover {
+            background-color: $grayBlue;
+            opacity: 0.9;
+        }
+    }
+
+    &.btn-dark {
+        color: #fff;
+        background-color: $dark;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &.btn-black {
+        color: #fff;
+        background-color: #000;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &.btn-line {
+        border: 2px solid #000;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #000;
+        border-radius: 0;
+
+        &:hover {
+            background-color: #000;
+            color: #fff !important;
+            border-color: #000
+        }
+    }
+
+    &.btn-line-white {
+        border: 2px solid #fff;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 0;
+
+        &:hover {
+            background-color: #fff;
+            color: #000 !important;
+            border-color: #fff
+        }
+    }
+
+    &.btn-line-radius {
+        background: transparent;
+        border: 1px solid $mgray;
+        border-radius: rem(40);
+
+        &:hover {
+            border-color: $red;
+        }
+    }
+
+    &.btn-full {
+        width: 100%;
+    }
+
+    &.btn-bold {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: rem(1)
+    }
+}

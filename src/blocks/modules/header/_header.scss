@@ -1,0 +1,171 @@
+.header {
+
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(20) 0;
+
+    &__mobile {
+        @media screen and (min-width: $w760) {
+            display: none;
+        }
+    }
+
+    &__logo {
+        & img {
+
+            @media screen and (min-width: $w1024) {
+                position: relative;
+            }
+
+            @media screen and (max-width: $w1376) {
+                max-width: rem(140);
+            }
+
+            @media screen and (max-width: $w1024) {
+                margin-left: rem(10);
+            }
+        }
+
+        @media screen and (max-width: $w580) {
+            margin-right: auto;
+        }
+    }
+
+    &__worktime {
+        flex-grow: 1;
+        text-align: center;
+
+        @media screen and (max-width: $w580) {
+            display: none;
+        }
+    }
+
+
+
+    &__phones {
+
+        @media screen and (max-width: $w580) {
+            margin-left: auto;
+            display: none;
+        }
+
+        & a {
+            color: $pink;
+            font-weight: bold;
+        }
+    }
+
+    &__worktime {
+
+        & span {
+            color: $pink;
+        }
+    }
+
+    &__phones-btn {
+
+        @media screen and (min-width: $w580) {
+            display: none;
+        }
+
+        background: #f7466e;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        & svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+
+
+
+
+}
+
+.header-nav {
+    padding: rem(20) 0;
+    border-top: 1px solid #ccc;
+
+    @media screen and (max-width: $w760) {
+        display: none;
+    }
+
+    & nav {
+        & ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & li a {
+                display: block;
+                border-bottom: 2px solid transparent;
+
+                &.active,
+                &:hover {
+                    border-bottom: 2px solid $pink;
+                    color: $pink;
+                }
+            }
+        }
+    }
+}
+
+
+.header__phones.open {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.header__phones.open ul {
+    background: #fff;
+    padding: 0px 0;
+    position: absolute;
+    width: calc(100% - 40px);
+    max-width: 350px;
+}
+
+.header__phones.open ul li {
+
+    border-bottom: 1px solid #ccc;
+
+}
+
+.header__phones.open ul li a {
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.header__phones.open ul li a::after {
+    content: '';
+    background-image: url(../img/svg/ic_phone-call-pink.svg);
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    /* background-color: #ccc; */
+    background-size: contain;
+}
+
+.header__phones.open ul li:last-child {
+
+    border-bottom: 0;
+}

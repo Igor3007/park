@@ -1,0 +1,114 @@
+.video {
+    margin: 0 auto;
+    position: relative;
+    background: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: rem(20);
+
+    @media screen and (max-width: $w480) {
+        border-radius: 0;
+    }
+
+    & iframe {
+        border: none;
+        position: relative;
+        z-index: 10;
+    }
+
+    &.play {
+
+        position: relative;
+
+        @keyframes load {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        &::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            border: 2px solid #fff;
+            display: block;
+            border-radius: 50%;
+            border-left: 2px solid transparent;
+            animation: load 1.5s infinite linear;
+            margin: 0 auto;
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            margin-left: -30px;
+            margin-top: -30px;
+
+        }
+
+        & .video__preview,
+        & .video__action {
+            display: none;
+        }
+    }
+
+    &__preview {
+        & span {
+            padding-top: 56%;
+            background-size: cover;
+            display: block;
+            background-position: center;
+        }
+    }
+
+    &__action {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: Playfair Display;
+        font-style: italic;
+        font-size: rem(30);
+        text-align: center;
+        color: #FFFFFF;
+        max-width: rem(400);
+        margin: 0 auto;
+        line-height: 140%;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+
+        & span {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+
+        & svg {
+            margin: rem(20) 0;
+            fill: #fe3e77;
+
+            @media screen and (max-width: $w580) {
+                width: 60px;
+                height: 60px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,9 @@
+mixin video (data, title)
+  .video(data-id=""+data.link+"")
+    .video__preview
+      +bgimage('https://i1.ytimg.com/vi/'+data.preview+'/hqdefault.jpg')
+    .video__action
+      if title
+        .video__title Испытание нашей теплицы сверхнагрузкой
+      .video__button
+        +icons('#ic_play', 70)

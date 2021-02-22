@@ -1,0 +1,1271 @@
+-
+  const questions =[
+    {
+      auto : {
+        img: '/img/autoBrand/mazda.png',
+        name: 'Mazda 6',
+      },
+      title : 'Какое масло выбрать для Mazda 6?',
+      exist :  1,
+      tags : [ 'Двигатель', 'Масло']
+    },
+
+    {
+      auto : {
+        img: '/img/autoBrand/honda.png',
+        name: 'HOnda civic',
+      },
+      title : 'Какие колодки купить на Хонду Цивик?',
+      exist :  1,
+      tags : [ 'ходовая', 'тормозная система']
+    },
+
+    {
+      auto : {
+        img: '/img/autoBrand/lada.png',
+        name: 'lada vesta',
+      },
+      title : 'Нужно ли прокачивать тормоза?',
+      exist :  0,
+      tags : [ 'ходовая', 'тормозная система']
+    },
+
+    {
+      auto : {
+        img: '/img/autoBrand/lada.png',
+        name: 'lada vesta',
+      },
+      title : 'Какое масло выбрать для Lada 6?',
+      exist :  1,
+      tags : [ 'Двигатель', 'Масло']
+    },
+
+    {
+      auto : {
+        img: '/img/autoBrand/mazda.png',
+        name: 'Mazda 6',
+      },
+      title : 'Какое масло выбрать для Mazda 6?',
+      exist :  1,
+      tags : [ 'ходовая', 'тормозная система']
+    },
+
+    {
+      auto : {
+        img: '/img/autoBrand/honda.png',
+        name: 'HOnda civic',
+      },
+      title : 'Какие колодки купить на Хонду Цивик?',
+      exist :  1,
+      tags : [ 'ходовая', 'тормозная система']
+    },
+
+
+      {
+        auto : {
+          img: '/img/autoBrand/lada.png',
+          name: 'lada vesta',
+        },
+        title : 'Какое масло выбрать для Lada 6?',
+        exist :  1,
+        tags : [ 'Двигатель', 'Масло']
+    },
+
+    {
+      auto : {
+        img: '/img/autoBrand/honda.png',
+        name: 'HOnda civic',
+      },
+      title : 'Какие колодки купить на Хонду Цивик?',
+      exist :  1,
+      tags : [ 'ходовая', 'тормозная система']
+    },
+
+  ];
+
+    const exp = [
+      {
+        img: '/img/expert/exp1.png',
+        name: 'Роман Кузнецов',
+        spec: 'Механник, мастер цеха, приёмщик специалист по Ford, Lexus',
+        online: 1,
+      },
+      {
+        img: '/img/expert/exp2.png',
+        name: 'Борис Кондрашкин',
+        spec: 'Механник, мастер цеха, приёмщик специалист по отечественным автомобилям',
+        online: 1,
+      },
+      {
+        img: '/img/expert/exp3.png',
+        name: 'Мария Мухина',
+        spec: 'Автоюрист, юридическая помощь в разрешении споров с ГИБДД',
+        online: 0,
+      }
+    ];
+
+    const catig = [
+      {
+        title: 'Все категории',
+        parent: false
+      },
+
+
+      {
+        title: 'Расходники ТО',
+        parent: false
+      },
+
+
+      {
+        title: 'Тормозная система',
+        parent:  [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Система впуска/выпуска',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Топливная система',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Двигатель',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Датчики',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Ходовая',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Рулевое',
+        parent: false
+      },
+
+
+      {
+        title: 'Трансмиссия',
+        parent: false
+      },
+
+
+      {
+        title: 'Коробка передач',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Охлаждение и отопление',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Электрика',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Освещение',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Система зажигания',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Кузов',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Масла и жидкости',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Салон',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Автоэлектроника',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+      {
+        title: 'Перебои в работе (неисправности)',
+        parent: [
+          {
+            title: 'Тормозной барабан',
+            parent: false
+          },
+
+
+          {
+            title: 'Тормозные колодки',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной диск',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной цилиндр',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной шланг',
+            parent: false
+          },
+
+          {
+            title: 'Вакуумный усилитель тормозов',
+            parent: false
+          },
+
+          {
+            title: 'Тормозной суппорт',
+            parent: false
+          },
+
+          {
+            title: 'Ручник',
+            parent: [
+              {
+                title: 'Eelectric',
+                parent: false
+              },
+              {
+                title: 'Automatic',
+                parent: false
+              },
+            ]
+          },
+
+          {
+            title: 'Тормозная жидкость',
+            parent: false
+          },
+
+          {
+            title: 'Педали',
+            parent: false
+          },
+
+          {
+            title: 'АБС',
+            parent: false
+          },
+        ]
+      },
+
+
+    ]
+
+
+

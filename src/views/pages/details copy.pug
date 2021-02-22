@@ -1,0 +1,72 @@
+extends ../layouts/index
+include ../../blocks/components/video/video
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+
+
+
+block content
+  .container
+    +breadcrumb(['Главная', 'Пластиковые окна'], false, 1)
+    .page
+      .page__aside
+        .aside-nav
+          .aside-nav__title Продукция
+          .aside-nav__list
+            ul(data-ul-select="")
+              li.active
+                a(href='/plastikovye-okna.html') Пластиковые окна
+                ul
+                  li: a(href='/salamander.html') SALAMANDER
+                  li: a(href='/kbe.html') KBE
+                  li: a(href='/exsprof.html') EXSPROF
+                  li: a(href='/wds.html') WDS
+                  li: a(href='/rehau.html') REHAU
+              li: a(href='/balkonnye-ramy.html') Балконные рамы
+              li: a(href='/plastikovye-dveri-pvh.html') Пластиковые двери ПВХ
+              li: a(href='/furnitura.html') Фурнитура
+              li: a(href='/osteklenie-kottedzhej.html') Остекление коттеджей
+              li: a(href='/dekorativnye-okna1.html') Декоративные окна
+              li: a(href='/francuzskie-balkony.html') Французские балконы
+              li: a(href='/aksessuary.html') Аксессуары
+              li: a(href='/zimnie-sady.html') Зимние сады
+              li: a(href='/laminirovannye-okna.html') Ламинированные окна
+              li: a(href='/okna-nestandartnoj-formy.html') Окна нестандартной формы
+              li: a(href='/steklopakety.html') Стеклопакеты
+              li: a(href='/panoramnoe-osteklenie.html') Панорамное остекление
+              li: a(href='/peregorodki.html') Перегородки
+
+      .page__main
+        h1 Пластиковые окна
+
+        p Пластиковые окна – ваш надежный защитник от любых прихотей климата и непредсказуемой погоды. Летом окна пвх спасут вас от жары и зноя, подарив желанную прохладу. Зимой пластиковые окна станут для вас преградой, не пропускающей в дом мороз и холод.
+        p Выбирая пластиковые окна в Могилеве, не стоит надеяться на волю случая и брать первые подвернувшиеся окна ПВХ от случайного, "левого" производителя. Выбор пластиковых окон – непростое дело и в нем стоит довериться профессионалам. Наш сайт посвящен вопросу выбора достойных пластиковых окон в Могилеве и именно мы готовы помочь Вам.
+
+        .box-gallery
+          .box-gallery__list
+            .box-gallery__item: a(href="/" data-fancybox="1"): +bgimage('/')
+            .box-gallery__item: a(href="/" data-fancybox="1"): +bgimage('/')
+            .box-gallery__item: a(href="/" data-fancybox="1"): +bgimage('/')
+            .box-gallery__item: a(href="/" data-fancybox="1"): +bgimage('/')
+            .box-gallery__item: a(href="/" data-fancybox="1"): +bgimage('/')
+            .box-gallery__item: a(href="/" data-fancybox="1"): +bgimage('/')
+
+        h2 СТОИМОСТЬ ДОМА, КВАРТИРЫ
+        p Замена окон является достаточно рациональной инвестицией, ведь жилая недвижимость становится дороже имея новые функциональные и комфортные светопрозрачные конструкции. Все вложения в замену окон компенсируются повышением стоимости объекта при его продаже.
+        h2 ЭНЕРГОЭФФЕКТИВНОСТЬ
+        p Энергоэффективные окна могут снизить до 35% от ваших расходов на отопление зимой и охлаждение летом. В старых домах, как правило, стоят еще «советские» окна с двумя рамами, которые нещадно дуют. Простая замена окон позволит избавится от сквозняков и шума.
+        h2 ПОВЫШЕНИЕ ФУНКЦИОНАЛЬНОСТИ
+        p Имея старые окна у вас не так уж и много вариантов их использования, отрыть или закрыть, в новых окнах вам будут доступны различные режимы проветривания, безопасное открытие, возможность выбора специальной фурнитуры для получения сдвижных, центрально поворотных или подъемных окон.
+
+        .box-brands
+          .box-brands__list
+            .box-brands__item: a(href="/"): +bgimage('/')
+            .box-brands__item: a(href="/"): +bgimage('/')
+            .box-brands__item: a(href="/"): +bgimage('/')
+            .box-brands__item: a(href="/"): +bgimage('/')
+            .box-brands__item: a(href="/"): +bgimage('/')
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

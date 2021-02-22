@@ -1,0 +1,57 @@
+extends ../layouts/index
+include ../../blocks/components/video/video
+include ../../blocks/components/breadcrumb/breadcrumb
+
+block variables
+
+
+
+block content
+  .container
+    +breadcrumb(['Главная', 'Пластиковые окна'], false, 1)
+    .page
+      .page__aside
+        .aside-nav
+          .aside-nav__title Продукция
+          .aside-nav__list.ul-select-wrp
+            ul.ul-select
+              li 
+                a(href='/plastikovye-okna.html') Пластиковые окна
+                ul
+                  li: a(href='/salamander.html') SALAMANDER
+                  li: a(href='/kbe.html') KBE
+                  li: a(href='/exsprof.html') EXSPROF
+                  li: a(href='/wds.html') WDS
+                  li: a(href='/rehau.html') REHAU
+              li: a(href='/balkonnye-ramy.html') Балконные рамы
+              li: a(href='/plastikovye-dveri-pvh.html') Пластиковые двери ПВХ
+              li: a(href='/furnitura.html') Фурнитура
+              li: a(href='/osteklenie-kottedzhej.html') Остекление коттеджей
+              li: a(href='/dekorativnye-okna1.html') Декоративные окна
+              li.active: a(href='/francuzskie-balkony.html') Французские балконы
+              li: a(href='/aksessuary.html') Аксессуары
+              li: a(href='/zimnie-sady.html') Зимние сады
+              li: a(href='/laminirovannye-okna.html') Ламинированные окна
+              li: a(href='/okna-nestandartnoj-formy.html') Окна нестандартной формы
+              li: a(href='/steklopakety.html') Стеклопакеты
+              li: a(href='/panoramnoe-osteklenie.html') Панорамное остекление
+              li: a(href='/peregorodki.html') Перегородки
+
+      .page__main
+        h1 Акции
+
+        .box-news
+          .box-news__list
+            each item in [1,2,3,4,5,6,7,8,9]
+              .news-item
+                .news-item__image: a(href="/news-details.html"): +bgimage('/')
+                .news-item__main  
+                  .news-item__title: a(href="/news-details.html") АКЦИЯ, ЛАМИНИРОВАННЫЕ ОКНА!!!
+                  .news-item__desc Уважаемые клиенты, напоминаем Вам, что специальное ценовое предложение на ламинированные окна и двери продлено! Приобрести ламинированные конструкции, Вы можете со скидкой.
+
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

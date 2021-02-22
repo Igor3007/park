@@ -1,0 +1,55 @@
+include ../../components/mobile-menu/mobile-menu.pug
+
+.container
+  .header
+    .header__mobile
+      .nav__hamburger
+        i
+        i
+        i
+
+    .header__logo
+      a(href="/"): img(src="/img/common/logo.png")
+    .header__worktime Время работы: 
+      span с 9-00 до 19-00
+    .header__phones
+      ul
+        li: a(href="+375296856502") +375 (29) 685-65-02
+        li: a(href="+375292876697") +375 (29) 287-66-97
+        li: a(href="+375222704370") +375 (222) 70-43-70 
+    .header__phones-btn: +icons('#ic_phone-call')
+  .header-nav
+    nav
+      ul
+        li.active
+          a(href='http://anex.by/') Главная
+        li
+          a(href='/plastikovye-okna.html') Продукция
+        li
+          a(href='/calculator.html') Калькулятор
+        li
+          a(href='ustanovka-okon') Услуги
+        li
+          a(href='/polezno-znat.html') Полезно знать
+        li
+          a(href='/akcii-i-skidki.html') Акции
+        li
+          a(href='/rasprodazha.html') Распродажа
+        li
+          a(href='/kontakty.html') Контакты
+
++mobile-menu()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

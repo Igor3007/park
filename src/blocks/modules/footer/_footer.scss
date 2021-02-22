@@ -1,0 +1,53 @@
+.footer {
+    background: #e4e1936b;
+    padding: 15px 0;
+    font-size: 13px;
+    border-top: 2px solid #c5bf50;
+    color: #666;
+
+    & a {
+        color: #666;
+    }
+
+    & ul {
+        list-style-type: none;
+
+        & li {
+            padding-bottom: 2px
+        }
+    }
+
+    &__wrp {
+        @include row-flex()
+    }
+
+    &__item {
+        @include col();
+        @include size-w760(3);
+        @include size(12);
+
+        @media screen and (max-width: $w760) {
+            text-align: center;
+
+            &:last-child,
+            & br {
+                display: none;
+            }
+
+
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        padding-bottom: 5px;
+    }
+}
+
+.liveinternet {
+    width: 100px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    background-color: #ccc;
+}
