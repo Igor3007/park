@@ -14,7 +14,7 @@ html(lang="ru")
     meta( http-equiv="x-ua-compatible" content="ie=edge")
 
     link(rel='preconnect' href='https://fonts.gstatic.com')
-    link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap' rel='stylesheet')
 
 
     link(rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon")
@@ -35,13 +35,11 @@ html(lang="ru")
     link(rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png")
     link(rel="stylesheet" href="styles/main.css?v=1.52")
   body
-    header.header-opacity
+    header
       block header
-        include ../../blocks/modules/header/header.pug
     main
       block content
     footer
       block footer
-        include ../../blocks/modules/footer/footer.pug
     block scripts
 

@@ -5,133 +5,65 @@ block variables
 
 
 
-block content
-  .container
-    section.banner-home
-      .banner-home__wrp
-        .banner-home__banners
-          .banner-home__slider
-            .banner-swiper.swiper-container
-              .swiper-wrapper
-                .swiper-slide: +bgimage('../img/banners/slide2.jpg')
-                .swiper-slide: +bgimage('../img/banners/slide4.jpg')
-                .swiper-slide: +bgimage('../img/banners/slide5.jpg')
-                .swiper-slide: +bgimage('../img/banners/slide8.jpg')
-              .swiper-dots-progress
-          .banner-home__red
-            h1 Окна ПВХ в Могилеве <br> Купить пластиковые окна и стеклопакеты 
-        .banner-home__menu
-          .banner-home__title Продукция
-          .banner-home__list
-            ul
-              li: a(href='/plastikovye-okna.html') Пластиковые окна
-              li: a(href='/balkonnye-ramy.html') Балконные рамы
-              li: a(href='/plastikovye-dveri-pvh.html') Пластиковые двери ПВХ
-              li: a(href='/furnitura.html') Фурнитура
-              li: a(href='/osteklenie-kottedzhej.html') Остекление коттеджей
-              li: a(href='/dekorativnye-okna1.html') Декоративные окна
-              li: a(href='/francuzskie-balkony.html') Французские балконы
-              li: a(href='/aksessuary.html') Аксессуары
-              li: a(href='/zimnie-sady.html') Зимние сады
-              li: a(href='/laminirovannye-okna.html') Ламинированные окна
-              li: a(href='/okna-nestandartnoj-formy.html') Окна нестандартной формы
-              li: a(href='/steklopakety.html') Стеклопакеты
-              li: a(href='/panoramnoe-osteklenie.html') Панорамное остекление
-              li: a(href='/peregorodki.html') Перегородки
-    section.action
-      .action__title Акции и скидки
-      .action__list
-        .action-item
-          .action-item__image
-            span.stick Акция
-            +bgimage('/img/action/act0.jpg')
-          .action-item__title: a(href="#") АКЦИЯ, ЛАМИНИРОВАННЫЕ ОКНА!!!
-
-        .action-item
-          .action-item__image
-            span.stick Акция
-            +bgimage('/img/action/act1.jpg')
-          .action-item__title: a(href="#") АКЦИЯ  "ПРИВЕДИ ДРУГА"
-
-        .action-item
-          .action-item__image
-            span.stick Акция
-            +bgimage('/img/action/act2.jpg')
-          .action-item__title: a(href="#") МОСКИТНАЯ СЕТКА В ПОДАРОК!!!
-
-        .action-item
-          .action-item__image
-            span.stick Акция
-            +bgimage('/img/action/act3.jpg')
-          .action-item__title: a(href="#") АКЦИЯ !!! КОМПЛЕКТ ПО УХОДУ ЗА ОКНАМИ В ПОДАРОК!!!
-      .action__more: a(href="#") Смотреть все акции  →
-    section.gallery
-      .gallery__title Галерея наших работ
-      .gallery__list.swiper-container
-        .swiper-wrapper
-          .swiper-slide
-            .gallery-item__image: a(href="/img/gallery/1.jpg" data-fancybox="" ): +bgimage('/img/gallery/1.jpg')
-          .swiper-slide
-            .gallery-item__image: a(href="/img/gallery/2.jpg" data-fancybox="" ): +bgimage('/img/gallery/2.jpg')
-          .swiper-slide
-            .gallery-item__image: a(href="/img/gallery/3.jpg" data-fancybox="" ): +bgimage('/img/gallery/3.jpg')
-          .swiper-slide
-            .gallery-item__image: a(href="/img/gallery/4.jpg" data-fancybox="" ): +bgimage('/img/gallery/4.jpg')
-          .swiper-slide
-            .gallery-item__image: a(href="/img/gallery/4.jpg" data-fancybox="" ): +bgimage('/img/gallery/4.jpg')
-        .swiper-dots
-      .swiper-nav
-        .swiper-nav__prev: +icons('#ic_arrow-left', 32)
-        .swiper-nav__next: +icons('#ic_arrow-right', 32)
-
-      .gallery__more: a(href="#") Смотреть всю галерею →
-    section.services
-      .services__title Наши услуги
-      .services__list
+block header
+  .header 
+    .header-top
+      .header-top__menu
+        .hamburger
+          i 
+          i 
+          i
+        span Меню
+      .header-top__logo
+        a(href='#'): img(src="/img/svg/logo.svg")
+      .header-top__phone
+        .header-top-phone
+          .header-top-phone__title Группа продаж
+          .header-top-phone__online Сейчас работаем
+      .header-top__msgr
         ul
-          li: a(href='/otdelka-otkosov.html') Отделка откосов
-          li: a(href='/otdelka-balkonov.html') Отделка балконов
-          li: a(href='/uteplenie-balkonov-i-lodzhij.html') Утепление балконов и лоджий
-          li: a(href='/narashhivanie-krysh-kozyrkov.html') Наращивание крыш, козырьков
-          li: a(href='/vynos-balkonov.html') Вынос балконов
-          li: a(href='/shkafy-na-balkony-i-lodzhii.html') Шкафы на балконы и лоджии
-          li: a(href='/konsultaciya.html') Консультация
-          li: a(href='/zamer.html') Замер
-          li: a(href='/okna-v-rassrochku.html') Окна в рассрочку
-          li: a(href='/okna-v-kredit.html') Окна в кредит
-          li: a(href='/dogovor-i-sposoby-oplaty.html') Договор и способы оплаты
-          li: a(href='/garantiya-i-servis.html') Гарантия и сервис
-          li: a(href='/dostavka.html') Доставка
-    section.banner-blue
-      .banner-blue__left У нас вы можете вызвать замерщика абсолютно <span>БЕСПЛАТНО</span>
-      .banner-blue__btn
-        button.btn вызов замерщика 
-    section.about
-      .about__title Оконная компания "Анекс"
-      .about__main
-        .about__img: +bgimage('/img/common/about.png')
-        .about__desc
-          p Уважаемые посетители, вы попали в оконную компанию «АНЕКС компани» в Могилеве. Вероятно, сейчас вы занимаетесь поиском и ищите надёжные, качественные,красивые, экологические и недорогие, а может быть и самые дешевые окна ПВХ или может другие конструкциииз ПВХ и алюминия,и главное , чтобы они исправно служили долго и без поломок.Наверняка, вы теряетесь в изобилии предложений от всевозможных оконных компаний, что вполне понятно. Ведь перед тем как купить окно, следует с ответственностью подойти к их выбору. Ведь окна должны надежно защищать от холода, ветра, дождя, шума и сохранять тепло.
-          p Поэтому, мы предлагаем полный спектр услуг, начиная от производства, заканчивая качественным монтажом пластиковых окон.Мы предлагаем огромный выборпрофилей известных мировых производителей, таких как,:VEKA, REHAU, KBE, SALAMANDER, EXPROF, BRUSBOX, WDSс использованием немецкой фурнитуры ROTO NT.
-    section.banner-red
-      .banner-red__left  Оставьте заявку прямо сейчас мы свяжемся с вами в ближайшее время
-      .banner-red__btn: button.btn оставить заявку
-    section.how-home
-      .how-home__title 
-      .how-home__video
-        .how-home__video-item: +video({'link':'sk2sEfefR3g', 'preview':'sk2sEfefR3g'})
-        .how-home__video-item: +video({'link':'NZgUIYw-5BY', 'preview':'NZgUIYw-5BY'})
-        .how-home__video-item: +video({'link':'Onvzz6aUmwU', 'preview':'Onvzz6aUmwU'})
-
-      .how-home__desc
-        p Прежде всего это оконные и дверные системы из Алюминиевого и ПВХ профилей, изготовление окон и дверей, зимних садов из алюминиевого и металлопластикового (ПВХ) профиля выполненные на высоком уровне сборки и монтажа, любой конфигурации и различных цветов, отвечающие всем современным европейским требованиям.
-        p Кроме типовых изделий определенных размеров и конфигурации, мы можем предложить Вам изготовление конструкций по индивидуальному эскизу, от стандартных прямоугольных окон - до овальных, круглых, полукруглых, французских,арочных, треугольных, трапециевидных, с любым способом открывания – откидным, поворотно-откидным, раздвижным, а также остекление лоджий, балконов, балконы под «ключ». И не только окна – но еще и двери, перегородки, витражи, беседки, веранды, террасы самых разнообразных модификаций. Также имеется большой ассортимент стеклопакетов.
-        p Если Вы собираетесь купить окна в свою квартиру, то в первую очередь Вас должны волновать их теплоизоляционные свойства- ведь от этого в большей степени и зависит комфорт. В вопросе зашиты от шума и ветра стеклопакеты играют главную роль, поэтому своим клиентам мы рекомендуем делать выбор в пользу двухкамерного пакета или однокамерного с энергосберегающим покрытием. Двухкамерные стеклопакеты стоит использовать, если окна Вашей квартиры выходят на проезжую часть или в комнате плохое отопление и высокая влажность. Если же Вы желаете купить окна в комнате, где уже есть застекленная лоджия, то можно сэкономить и выбрать однокамерный стеклопакет.
-        p Не стоит экономить и на фурнитуре- ее правильный выбор позволит Вам долго эксплуатировать окна без регулировки и ремонта. Открывание и закрывание, фиксация в нужном положении, мягкость хождения створки, плотность закрытия и долговечность конструкции - все это качественная фурнитура.
-        p Окна бывают без открывания (глухими) и со створками, имеющими поворотно-откидной механизм, поэтому от этого зависит конечная стоимость изделия. Перед заказом подумайте, насколько удобно Вам будет мыть окно и проветривать комнату.
-        p Долговечность эксплуатации будет зависеть и от качественного монтажа и монтажных материалов,т.к. погрешности установки окон всегда видны в ветренную погоду. Советуем не экономить на монтаже, чтобы впоследствии не платить за дополнительные регулировки.
-        p Опытный мастер произведет замер и спроектирует эскиз, учитывая все Ваши пожелания и требования. Специалисты нашей компании сделают профессиональный замер, просчитают стоимость, доставят и установят заказанное Вами изделие.
-        p Вся наша продукция полностью протестирована и одобрена для использования в условиях Белоруссии. Именно поэтому мы не боимся за качество нашей продукции и предоставляем гарантию на изделия на 5 лет! 
+          li: a(href='#'): +icons('#ic_call')
+          li: a(href='#'): +icons('#ic_wa')
+          li: a(href='#'): +icons('#ic_tg')
+      .header-top__callback
+        button.btn.btn-line Заказать звонок
+block content
+  section header-section
+    .container
+      .header-content
+        .header-content__title 
+          h1 Ренессанс Парк
+          p Коттеджный поселок
+        .header-content__info
+          .content-info
+            .content-info__list
+              .content-info__item
+                .content-info__digit <span>310</span>
+                .content-info__desc Количество домов в поселке 
+              .content-info__item
+                .content-info__digit  От <span>21</span> млн. ₽
+                .content-info__desc минимальная цена дома
+              .content-info__item
+                .content-info__digit   От <span>350</span> до <span>800</span> м² 
+                .content-info__desc минимальная площадь участков
+              .content-info__item
+                .content-info__digit <span>130 Га</span>
+                .content-info__desc минимальная площадь участков
+        .header-content__form
+          .header-form
+            .header-form__image
+              +bgimage('/img/')
+            .header-form__form
+              form
+                .form
+                  .form__item
+                    .form__subitem: input(type="text" placeholder="Имя")
+                    .form__subitem: input(type="tel" placeholder="+7___-___-__-__")
+                    .form__subitem
+                      button.btn.btn-blue
+    section about
+block footer
+  div.footer footer
 
 block scripts
   script(src="js/main.js?v=1.52")
