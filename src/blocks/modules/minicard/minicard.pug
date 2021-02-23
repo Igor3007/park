@@ -1,0 +1,17 @@
+mixin minicard(data)
+  .minicard
+    .minicard__image
+      +bgimage('/img/catalog/'+data.img+'.jpg')
+      span.id-catalog Дом ID 5613
+
+    .minicard__desc
+      .minicard__props
+        ul
+          li Отделка: <span>Без отделки</span>
+          li Площадь: <span>775 м2</span>
+          li Участок: <span>23 сот.</span>
+      .minicard__price
+        .minicard__usd 1 0016 811 $
+        .minicard__bub  66 977 341 руб
+
+    .minicard__btn: button.btn.btn-line.btn-full Подробнее
