@@ -193,6 +193,106 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 
 /***/ }),
 
+/***/ "./src/blocks/components/tabs/tabs.js":
+/*!********************************************!*\
+  !*** ./src/blocks/components/tabs/tabs.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Start tabs.js
+(function () {
+  'use strict';
+  /**
+   * tabs
+   *
+   * @description The Tabs component.
+   * @param {Object} options The options hash
+   */
+
+  var tabs = function tabs(options) {
+    if (document.querySelector(options.el)) {
+      var el = document.querySelector(options.el);
+      var tabNavigationLinks = el.querySelectorAll(options.tabNavigationLinks);
+      var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
+      var activeIndex = 0;
+      var initCalled = false;
+    } else {
+      return false;
+    }
+    /**
+     * init
+     *
+     * @description Initializes the component by removing the no-js class from
+     *   the component, and attaching event listeners to each of the nav items.
+     *   Returns nothing.
+     */
+
+
+    var init = function init() {
+      if (!initCalled) {
+        initCalled = true;
+        el.classList.remove('no-js');
+
+        for (var i = 0; i < tabNavigationLinks.length; i++) {
+          var link = tabNavigationLinks[i];
+          handleClick(link, i);
+        }
+      }
+    };
+    /**
+     * handleClick
+     *
+     * @description Handles click event listeners on each of the links in the
+     *   tab navigation. Returns nothing.
+     * @param {HTMLElement} link The link to listen for events on
+     * @param {Number} index The index of that link
+     */
+
+
+    var handleClick = function handleClick(link, index) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        goToTab(index);
+      });
+    };
+    /**
+     * goToTab
+     *
+     * @description Goes to a specific tab based on index. Returns nothing.
+     * @param {Number} index The index of the tab to go to
+     */
+
+
+    var goToTab = function goToTab(index) {
+      if (index !== activeIndex && index >= 0 && index <= tabNavigationLinks.length) {
+        tabNavigationLinks[activeIndex].classList.remove('active');
+        tabNavigationLinks[index].classList.add('active');
+        tabContentContainers[activeIndex].classList.remove('active');
+        tabContentContainers[index].classList.add('active');
+        activeIndex = index;
+      }
+    };
+    /**
+     * Returns init and goToTab
+     */
+
+
+    return {
+      init: init,
+      goToTab: goToTab
+    };
+  };
+  /**
+   * Attach to global namespace
+   */
+
+
+  window.tabs = tabs;
+})(); // End tabs.js
+
+/***/ }),
+
 /***/ "./src/blocks/components/video/video.js":
 /*!**********************************************!*\
   !*** ./src/blocks/components/video/video.js ***!
@@ -307,10 +407,12 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (e)
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_select_select__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %components%/select/select */ "./src/blocks/components/select/select.js");
-/* harmony import */ var _components_video_video__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %components%/video/video */ "./src/blocks/components/video/video.js");
-// import "%components%/tabs/tabs";
-// import "%components%/form/form";
+/* harmony import */ var _components_tabs_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %components%/tabs/tabs */ "./src/blocks/components/tabs/tabs.js");
+/* harmony import */ var _components_tabs_tabs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_tabs_tabs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_select_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %components%/select/select */ "./src/blocks/components/select/select.js");
+/* harmony import */ var _components_video_video__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %components%/video/video */ "./src/blocks/components/video/video.js");
+ // import "%components%/form/form";
+
  // import "%components%/mobile-menu/mobile-menu"; 
 
 
@@ -2222,6 +2324,37 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).ready(function () {
   }); //   $(document).on('scroll', function (e){  
   //     $(".header__phones").removeClass('open');
   //   });
+
+  /* tabs in basket */
+
+  if (document.querySelector('[data-tabs=catalog]')) {
+    var tabsDelivery = tabs({
+      el: '[data-tabs=catalog]',
+      tabNavigationLinks: '.tab-link',
+      tabContentContainers: '.tab-content'
+    }).init();
+    jquery__WEBPACK_IMPORTED_MODULE_4___default()('.hamburger').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()(this).toggleClass('open');
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.mobile-menu').toggleClass('open');
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()('html').toggleClass('hidden');
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_4___default()('.mobile-menu__close svg').on('click', function () {
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.hamburger').toggleClass('open');
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()('.mobile-menu').toggleClass('open');
+      jquery__WEBPACK_IMPORTED_MODULE_4___default()('html').toggleClass('hidden');
+    }); //закрыть при клике вне
+
+    jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).on('click', function (e) {
+      var div = jquery__WEBPACK_IMPORTED_MODULE_4___default()(".hamburger, .mobile-menu"); //класс элемента вне которого клик
+
+      if (!div.is(e.target) && div.has(e.target).length === 0) {
+        //закрыть popup
+        if (jquery__WEBPACK_IMPORTED_MODULE_4___default()('.hamburger').hasClass('open')) {
+          jquery__WEBPACK_IMPORTED_MODULE_4___default()('.hamburger').trigger('click');
+        }
+      }
+    });
+  }
 });
 swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_3__["Thumbs"], swiper__WEBPACK_IMPORTED_MODULE_3__["Autoplay"]]);
 /* design banner */
@@ -2238,10 +2371,18 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.section-galler
 });
 var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.infr-slider-main .swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 40,
   navigation: {
     nextEl: '.infr-slider-next',
     prevEl: '.infr-slider-prev'
+  }
+});
+var swiper3 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.team-slider-main .swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.team-slider-next',
+    prevEl: '.team-slider-prev'
   }
 });
 ymaps.ready(function () {

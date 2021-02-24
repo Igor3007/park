@@ -37,7 +37,7 @@
             <div class="header-top__menu">
               <div class="hamburger"><i> </i><i> </i><i></i></div><span>Меню</span>
             </div>
-            <div class="header-top__logo"><a href="#"><img src="/img/common/logo.png"></a></div>
+            <div class="header-top__logo"><a href="/"><img src="/img/common/logo.png"></a></div>
             <div class="header-top__phone">
               <div class="header-top-phone">
                 <div class="header-top-phone__title">Группа продаж</div>
@@ -129,7 +129,7 @@
       <section class="section-about-park">
         <div class="container">
           <div class="section-title"> 
-            <h2>О поселке “Ренессанс Парк”</h2><span>о поселке</span>
+            <h2>О поселке “Ренессанс Парк”</h2><span>О поселке “Ренессанс Парк”</span>
           </div>
           <div class="about-park">
             <div class="about-park__image"><img src="/img/common/about.png"></div>
@@ -139,21 +139,21 @@
           </div>
         </div>
       </section>
-      <section class="section-catalog-park">
+      <section class="section-catalog-park" style="background-image: url(../img/common/catalog-bg.png)">
         <div class="container">
           <div class="section-title">
             <h2> Дома в поселке “Ренессанс Парк”</h2><span>Дома в поселке “Ренессанс Парк”</span>
           </div>
           <div class="catalog-park">
-            <div class="catalog-park__wrp">
+            <div class="catalog-park__wrp no-js" data-tabs="catalog">
               <div class="catalog-park__tabs">
                 <ul>
-                  <li class="active">
+                  <li class="tab-link active">
                     <svg width="25" height="25">
                       <use xlink:href="/img/sprites/sprite.svg#ic_house"></use>
                     </svg>дома
                   </li>
-                  <li>
+                  <li class="tab-link">
                     <svg width="25" height="25">
                       <use xlink:href="/img/sprites/sprite.svg#ic_area"></use>
                     </svg>участки
@@ -161,7 +161,7 @@
                 </ul>
               </div>
               <div class="catalog-park__content">
-                <div class="catalog-park__item-tab">
+                <div class="catalog-park__item-tab tab-content active">
                   <div class="catalog-park__list">
                     <div class="catalog-park__item">
                       <div class="minicard">
@@ -299,7 +299,78 @@
                     </div>
                   </div>
                 </div>
-                <div class="catalog-park__item-tab"></div>
+                <div class="catalog-park__item-tab tab-content"> 
+                  <div class="catalog-park__list">
+                    <div class="catalog-park__item">
+                      <div class="minicard minicard--blur">
+                        <div class="minicard__blur"><span>Продано</span></div>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/2.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        </div>
+                        <div class="minicard__desc">
+                          <div class="minicard__props">
+                            <ul>
+                              <li>Отделка: <span>Без отделки</span></li>
+                              <li>Площадь: <span>775 м2</span></li>
+                              <li>Участок: <span>23 сот.</span></li>
+                            </ul>
+                          </div>
+                          <div class="minicard__price">
+                            <div class="minicard__usd">1 0016 811 $</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
+                          </div>
+                        </div>
+                        <div class="minicard__btn">
+                          <button class="btn btn-line btn-full">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-park__item">
+                      <div class="minicard">
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/3.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        </div>
+                        <div class="minicard__desc">
+                          <div class="minicard__props">
+                            <ul>
+                              <li>Отделка: <span>Без отделки</span></li>
+                              <li>Площадь: <span>775 м2</span></li>
+                              <li>Участок: <span>23 сот.</span></li>
+                            </ul>
+                          </div>
+                          <div class="minicard__price">
+                            <div class="minicard__usd">1 0016 811 $</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
+                          </div>
+                        </div>
+                        <div class="minicard__btn">
+                          <button class="btn btn-line btn-full">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-park__item">
+                      <div class="minicard minicard--blur">
+                        <div class="minicard__blur"><span>Продано</span></div>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/2.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        </div>
+                        <div class="minicard__desc">
+                          <div class="minicard__props">
+                            <ul>
+                              <li>Отделка: <span>Без отделки</span></li>
+                              <li>Площадь: <span>775 м2</span></li>
+                              <li>Участок: <span>23 сот.</span></li>
+                            </ul>
+                          </div>
+                          <div class="minicard__price">
+                            <div class="minicard__usd">1 0016 811 $</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
+                          </div>
+                        </div>
+                        <div class="minicard__btn">
+                          <button class="btn btn-line btn-full">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -357,6 +428,13 @@
                       <div class="swiper-slide">
                         <div class="sales-team-slide">
                           <div class="sales-team-slide__desc">Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  </div>
+                          <div class="sales-team-slide__name">Александра</div>
+                          <div class="sales-team-slide__spec">Менеджер по продажам</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sales-team-slide">
+                          <div class="sales-team-slide__desc">2 Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  </div>
                           <div class="sales-team-slide__name">Александра</div>
                           <div class="sales-team-slide__spec">Менеджер по продажам</div>
                         </div>
@@ -460,18 +538,20 @@
         </div>
       </section>
       <section class="section-video">
+        <div class="section-title"> 
+          <h2>Видео обзор поселка "Ренессанс Парк”</h2><span>Видео обзор поселка "Ренессанс Парк”</span>
+        </div>
         <div class="container">
-          <div class="section-title"> 
-            <h2>Видео обзор поселка "Ренессанс Парк”</h2><span>Видео обзор поселка</span>
-          </div>
-          <div class="video" data-id="function link() { [native code] }">
-            <div class="video__preview"><span class="bgimage" style="background-image: url(../img/common/video-preview.jpg)"></span>
-            </div>
-            <div class="video__action">
-              <div class="video__button">
-                <svg width="70" height="70">
-                  <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
-                </svg>
+          <div class="section-video__container"> 
+            <div class="video" data-id="function link() { [native code] }">
+              <div class="video__preview"><span class="bgimage" style="background-image: url(../img/common/video-preview.jpg)"></span>
+              </div>
+              <div class="video__action">
+                <div class="video__button">
+                  <svg width="70" height="70">
+                    <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -590,13 +670,13 @@
               </div>
               <div class="section-contacts__callback">
                 <div class="section-contacts__btn">
-                  <button class="btn btn-line">Заказать звонок</button>
+                  <button class="btn btn-line btn-small">Заказать звонок</button>
                 </div>
                 <div class="section-contacts__msgr"><a href="#">
-                    <svg width="14" height="14">
+                    <svg width="17" height="17">
                       <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
                     </svg></a><a href="#">
-                    <svg width="14" height="14">
+                    <svg width="17" height="17">
                       <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
                     </svg></a></div>
               </div>
@@ -645,10 +725,48 @@
                     <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
                   </svg></a></div>
               <div class="footer__btn">
-                <button class="btn btn-line btn-white">Заказать звонок</button>
+                <button class="btn btn-line btn-white btn-small">Заказать звонок</button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="mobile-menu">
+        <div class="mobile-menu__wrp">
+          <div class="mobile-menu__close">
+            <svg width="30" height="30">
+              <use xlink:href="/img/sprites/sprite.svg#ic_cross"></use>
+            </svg>
+          </div>
+          <div class="mobile-menu__nav">
+            <nav>
+              <ul> 
+                <li><a href="#">О поселке</a></li>
+                <li><a href="#">Дома/участки в поселке</a></li>
+                <li><a href="#">Генплан поселка</a></li>
+                <li><a href="#">Команда отдела продаж</a></li>
+                <li><a href="#">Галерея</a></li>
+                <li><a href="#">Презентация</a></li>
+                <li><a href="#">Инфраструктура</a></li>
+                <li><a href="#">Расположение поселка</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-menu__consult">
+            <div class="mobile-menu__manager"></div>
+            <div class="mobile-menu__text"></div>
+          </div>
+          <div class="mobile-menu__phone"><a href="tel:+7 (495) 085-16-64">+7 (495) 085-16-64</a></div>
+          <div class="mobile-menu__callback">
+            <button class="btn btn-small btn-line">Заказать звонок</button>
+          </div>
+          <div class="mobile-menu__msgr"><a href="#">
+              <svg width="17" height="17">
+                <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+              </svg></a><a href="#">
+              <svg width="17" height="17">
+                <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+              </svg></a></div>
         </div>
       </div>
     </footer>

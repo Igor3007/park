@@ -16,7 +16,7 @@ block header
             i
           span Меню
         .header-top__logo
-          a(href='#'): img(src="/img/common/logo.png")
+          a(href='/'): img(src="/img/common/logo.png")
         .header-top__phone
           .header-top-phone
             .header-top-phone__title Группа продаж
@@ -67,32 +67,35 @@ block content
     .container
       .section-title 
         h2 О поселке “Ренессанс Парк”
-        span о поселке
+        span О поселке “Ренессанс Парк”
       .about-park
         .about-park__image: img(src="/img/common/about.png")
         .about-park__desc
           p «Ренессанс Парк» – это филигранно ограненная красота природы и возможность вести активный образ жизни, не замыкаясь в уединении. Дома в стиле европейских аристократических резиденций, собственный пляж с белым кварцевым песком, премиальная инфраструктура других посёлков Villagio Estate – повседневность для жителей «Ренессанс Парк». Жить здесь, значит, окружить себя аурой красоты и здоровья, созданной самой природой. Посёлок вытянут вдоль векового соснового леса, который наполняет окружающее пространство фитонцидами – мощнейшим природным антисептиком, уничтожающим патогенные микроорганизмы. Жители «Ренессанс Парка» ежедневно укрепляют свой иммунитет, просто вдыхая целебный воздух хвойного леса. 
-  section.section-catalog-park
+  section.section-catalog-park(style="background-image: url(../img/common/catalog-bg.png)")
     .container
       .section-title
         h2  Дома в поселке “Ренессанс Парк”
         span Дома в поселке “Ренессанс Парк”
       .catalog-park
-        .catalog-park__wrp
+        .catalog-park__wrp.no-js(data-tabs="catalog")
           .catalog-park__tabs
             ul
-              li.active
+              li.tab-link.active
                 +icons('#ic_house')
                 | дома
-              li
+              li.tab-link
                 +icons('#ic_area')
                 | участки
           .catalog-park__content
-            .catalog-park__item-tab
+            .catalog-park__item-tab.tab-content.active
               .catalog-park__list
                 each item in [1,2,3,4,3,1]
                   .catalog-park__item: +minicard(item)
-            .catalog-park__item-tab
+            .catalog-park__item-tab.tab-content  
+              .catalog-park__list
+                each item in [2,3,2]
+                  .catalog-park__item: +minicard(item)
   section.section-general-plan
     .container
       .section-title
@@ -123,6 +126,11 @@ block content
                   .swiper-slide
                     .sales-team-slide
                       .sales-team-slide__desc Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  
+                      .sales-team-slide__name Александра
+                      .sales-team-slide__spec Менеджер по продажам
+                  .swiper-slide
+                    .sales-team-slide
+                      .sales-team-slide__desc 2 Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  
                       .sales-team-slide__name Александра
                       .sales-team-slide__spec Менеджер по продажам
             .team-slider-next
@@ -171,11 +179,12 @@ block content
           .gallery-nav__prev: +icons('#ic_prev-swiper')
           .gallery-nav__next: +icons('#ic_next-swiper')
   section.section-video
+    .section-title 
+      h2 Видео обзор поселка "Ренессанс Парк”
+      span Видео обзор поселка "Ренессанс Парк”
     .container
-      .section-title 
-        h2 Видео обзор поселка "Ренессанс Парк”
-        span Видео обзор поселка
-      +video('#idyoutube')
+      .section-video__container  
+        +video('#idyoutube')
 
   section.section-infrastructure
     .container
@@ -244,10 +253,10 @@ block content
             a(href='tel:+74950851664') +7 (495) 085-16-64
           .section-contacts__callback
             .section-contacts__btn
-              button.btn.btn-line Заказать звонок
+              button.btn.btn-line.btn-small Заказать звонок
             .section-contacts__msgr
-              a(href='#'): +icons('#ic_wa', 14)
-              a(href='#'): +icons('#ic_tg', 14)
+              a(href='#'): +icons('#ic_wa', 17)
+              a(href='#'): +icons('#ic_tg', 17)
         .section-contacts__image
           .circle-image
             .circle-image__big: +bgimage('/img/common/cr2.jpg')
@@ -278,7 +287,31 @@ block footer
             a(href='#'): +icons('#ic_wa', 28)
             a(href='#'): +icons('#ic_tg', 28)
           .footer__btn
-            button.btn.btn-line.btn-white Заказать звонок
+            button.btn.btn-line.btn-white.btn-small Заказать звонок
+  .mobile-menu
+    .mobile-menu__wrp
+      .mobile-menu__close: +icons('#ic_cross', 30)
+      .mobile-menu__nav
+        nav
+          ul 
+            li: a(href="#") О поселке
+            li: a(href="#") Дома/участки в поселке
+            li: a(href="#") Генплан поселка
+            li: a(href="#") Команда отдела продаж
+            li: a(href="#") Галерея
+            li: a(href="#") Презентация
+            li: a(href="#") Инфраструктура
+            li: a(href="#") Расположение поселка
+      .mobile-menu__consult
+        .mobile-menu__manager
+        .mobile-menu__text
+      .mobile-menu__phone
+        a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
+      .mobile-menu__callback
+        button.btn.btn-small.btn-line Заказать звонок
+      .mobile-menu__msgr
+        a(href='#'): +icons('#ic_wa', 17)
+        a(href='#'): +icons('#ic_tg', 17)
 
 block scripts
   script(src="js/main.js?v=1.52")

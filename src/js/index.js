@@ -28,6 +28,45 @@ $(document).ready(function() {
     //   $(document).on('scroll', function (e){  
     //     $(".header__phones").removeClass('open');
     //   });
+
+    /* tabs in basket */
+
+  if(document.querySelector('[data-tabs=catalog]')){
+    var tabsDelivery = tabs({
+        el: '[data-tabs=catalog]',
+        tabNavigationLinks: '.tab-link',
+        tabContentContainers: '.tab-content'
+    }).init();
+
+    $('.hamburger').on('click', function(){
+      $(this).toggleClass('open')
+      $('.mobile-menu').toggleClass('open')
+      $('html').toggleClass('hidden')
+    });
+
+    $('.mobile-menu__close svg').on('click', function(){
+      $('.hamburger').toggleClass('open')
+      $('.mobile-menu').toggleClass('open')
+      $('html').toggleClass('hidden')
+    });
+
+  
+
+
+  //закрыть при клике вне
+
+  $(document).on('click', function (e) {
+      var div = $(".hamburger, .mobile-menu");  //класс элемента вне которого клик
+      if (!div.is(e.target) && div.has(e.target).length === 0) {
+          //закрыть popup
+          if($('.hamburger').hasClass('open')){
+              $('.hamburger').trigger('click')
+          }
+          
+      }
+  });
+}
+
 });
 
 Swiper.use([Pagination, Navigation, Thumbs, Autoplay]);
@@ -50,10 +89,21 @@ var swiper = new Swiper('.section-gallery__swiper .swiper-container', {
 var swiper2 = new Swiper('.infr-slider-main .swiper-container', {
 
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 40,
   navigation: {
     nextEl: '.infr-slider-next',
     prevEl: '.infr-slider-prev',
+  },
+
+});
+
+var swiper3 = new Swiper('.team-slider-main .swiper-container', {
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.team-slider-next',
+    prevEl: '.team-slider-prev',
   },
 
 });
