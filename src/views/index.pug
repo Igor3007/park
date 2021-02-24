@@ -252,8 +252,8 @@ block content
           .circle-image
             .circle-image__big: +bgimage('/img/common/cr2.jpg')
             .circle-image__min: +bgimage('/img/common/cr2.jpg')
-      .section-contacts__map
-        span(style="padding-top: 300px; background-color: #eee;")
+    .section-contacts__map
+      span(id="map-container" style="height: 500px; background-color: #eee;")
 
 block footer
   div.footer
@@ -271,12 +271,12 @@ block footer
           li: a(href='#') Инфраструктура
           li: a(href='#') Расположение поселка
       .footer__info
-        .footer__info-text Нужна помощь? Позвоните или напишите в чат эксперту проекта
+        .footer__info-text Нужна помощь? <br> Позвоните или напишите в чат <br> эксперту проекта
         .footer__callback
           .footer__phone: a(href='tel:+74950851664') +7 (495) 085-16-64
           .footer__msgr
-            a(href='#'): +icons('#ic_wa')
-            a(href='#'): +icons('#ic_tg')
+            a(href='#'): +icons('#ic_wa', 28)
+            a(href='#'): +icons('#ic_tg', 28)
           .footer__btn
             button.btn.btn-line.btn-white Заказать звонок
 

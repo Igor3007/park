@@ -3122,7 +3122,6 @@ ul {
   background: #242424;
   color: #fff;
   padding-top: 6.66667rem;
-  padding-bottom: 6.66667rem;
   color: #fff;
 }
 
@@ -3133,6 +3132,10 @@ ul {
 
 .section-contacts a {
   color: #fff;
+}
+
+.section-contacts .section-title {
+  padding-bottom: 4rem;
 }
 
 .section-contacts .section-title h2 {
@@ -3180,6 +3183,29 @@ ul {
 .section-contacts__callback {
   display: flex;
   align-items: center;
+}
+
+.section-contacts__map span {
+  display: block;
+}
+
+#map-container {
+  filter: grayscale(1);
+}
+
+footer {
+  background: #828282;
+  padding-top: 3.33333rem;
+  padding-bottom: 3.33333rem;
+  color: #fff;
+}
+
+footer .container {
+  display: flex;
+}
+
+footer ul li a {
+  color: #fff;
 }
 
 .btn {
@@ -4592,12 +4618,20 @@ h1 {
   }
 
   .section-contacts {
-    padding-bottom: 5rem;
     padding-top: 5rem;
+  }
+
+  .section-contacts .section-title {
+    padding-bottom: 3rem;
   }
 
   .section-contacts__info {
     padding-top: 0.75rem;
+  }
+
+  footer {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
   }
 
   h1 {
@@ -4683,12 +4717,20 @@ h1 {
   }
 
   .section-contacts {
-    padding-bottom: 4.77778rem;
     padding-top: 4.77778rem;
+  }
+
+  .section-contacts .section-title {
+    padding-bottom: 2.86667rem;
   }
 
   .section-contacts__info {
     padding-top: 0.71667rem;
+  }
+
+  footer {
+    padding-bottom: 2.38889rem;
+    padding-top: 2.38889rem;
   }
 
   .section-h1 {
@@ -4788,12 +4830,20 @@ h1 {
   }
 
   .section-contacts {
-    padding-bottom: 3.81944rem;
     padding-top: 3.81944rem;
+  }
+
+  .section-contacts .section-title {
+    padding-bottom: 2.29167rem;
   }
 
   .section-contacts__info {
     padding-top: 0.57292rem;
+  }
+
+  footer {
+    padding-bottom: 1.90972rem;
+    padding-top: 1.90972rem;
   }
 }
 
@@ -4881,11 +4931,19 @@ h1 {
   }
 
   .section-contacts {
-    padding-bottom: 3.33333rem;
     padding-top: 3.33333rem;
   }
 
+  .section-contacts .section-title {
+    padding-bottom: 3.33333rem;
+  }
+
   .section-contacts__info {
+    padding-top: 3.33333rem;
+  }
+
+  footer {
+    padding-bottom: 3.33333rem;
     padding-top: 3.33333rem;
   }
 
