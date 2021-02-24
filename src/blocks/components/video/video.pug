@@ -1,7 +1,7 @@
 mixin video (data, title)
   .video(data-id=""+data.link+"")
     .video__preview
-      +bgimage('https://i1.ytimg.com/vi/'+data.preview+'/hqdefault.jpg')
+      +bgimage('../img/common/video-preview.jpg')
     .video__action
       if title
         .video__title Испытание нашей теплицы сверхнагрузкой

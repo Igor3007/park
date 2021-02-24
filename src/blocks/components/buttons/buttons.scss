@@ -28,7 +28,10 @@
 
 
     &.btn-small {
-        padding: 1.4em 3em;
+        padding: 0.8em 2em;
+        border: 1px solid #000 !important;
+        font-weight: 400 !important;
+        text-transform: none !important;
     }
 
     &.btn-line {

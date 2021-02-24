@@ -1,7 +1,15 @@
 mixin minicard(data)
-  .minicard
+  .minicard(class=""+(data == 2 || data == 4 ? 'minicard--blur':'')+"")
+
+    if data == 2
+      .minicard__blur
+        span Продано
+    if data == 4
+      .minicard__blur
+        span Закрытая <br> продажа
+
     .minicard__image
-      +bgimage('/img/catalog/'+data.img+'.jpg')
+      +bgimage('/img/catalog/'+data+'.jpg')
       span.id-catalog Дом ID 5613
 
     .minicard__desc
@@ -12,6 +20,6 @@ mixin minicard(data)
           li Участок: <span>23 сот.</span>
       .minicard__price
         .minicard__usd 1 0016 811 $
-        .minicard__bub  66 977 341 руб
+        .minicard__rub  66 977 341 руб
 
     .minicard__btn: button.btn.btn-line.btn-full Подробнее

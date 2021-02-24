@@ -27,15 +27,14 @@ block header
             li: a(href='#'): +icons('#ic_wa')
             li: a(href='#'): +icons('#ic_tg')
         .header-top__callback
-          button.btn.btn-line Заказать звонок
+          button.btn.btn-line.btn-small Заказать звонок
 block content
-  section.header-section
+  section.header-section(style="background-image: url(../img/common/header-bg.jpg)")
     .container
       .header-content
         .header-content__title 
           h1 Ренессанс Парк
           p Коттеджный поселок
-        .header-content__info
         .header-content__info
           .content-info
             .content-info__list
@@ -46,7 +45,7 @@ block content
                 .content-info__digit  От <span>21</span> млн. ₽
                 .content-info__desc минимальная цена дома
               .content-info__item
-                .content-info__digit   От <span>350</span> до <span>800</span> м² 
+                .content-info__digit   От <span>350</span> до <br> <span>800</span> м² 
                 .content-info__desc минимальная площадь участков
               .content-info__item
                 .content-info__digit <span>130 Га</span>
@@ -54,7 +53,7 @@ block content
         .header-content__form 
           .header-form
             .header-form__image
-              +bgimage('/img/')
+              +bgimage('../img/common/laptop.png')
             .header-form__form
               form
                 .form
@@ -63,22 +62,31 @@ block content
                     .form__subitem: input(type="tel" placeholder="+7___-___-__-__")
                     .form__subitem
                       button.btn.btn-blue Получить презентацию
-                  .form__item Получите презентацию участков от наших экспертов
+                  .form__item: .form-text Получите презентацию участков от наших экспертов
   section.section-about-park
     .container
-      .section-title О поселке “Ренессанс Парк”
+      .section-title 
+        h2 О поселке “Ренессанс Парк”
+        span о поселке
       .about-park
-        .about-park__image: img(src="/img/common/")
+        .about-park__image: img(src="/img/common/about.png")
         .about-park__desc
           p «Ренессанс Парк» – это филигранно ограненная красота природы и возможность вести активный образ жизни, не замыкаясь в уединении. Дома в стиле европейских аристократических резиденций, собственный пляж с белым кварцевым песком, премиальная инфраструктура других посёлков Villagio Estate – повседневность для жителей «Ренессанс Парк». Жить здесь, значит, окружить себя аурой красоты и здоровья, созданной самой природой. Посёлок вытянут вдоль векового соснового леса, который наполняет окружающее пространство фитонцидами – мощнейшим природным антисептиком, уничтожающим патогенные микроорганизмы. Жители «Ренессанс Парка» ежедневно укрепляют свой иммунитет, просто вдыхая целебный воздух хвойного леса. 
   section.section-catalog-park
     .container
-      .section-title Дома в поселке “Ренессанс Парк”
+      .section-title
+        h2  Дома в поселке “Ренессанс Парк”
+        span Дома в поселке “Ренессанс Парк”
       .catalog-park
         .catalog-park__wrp
           .catalog-park__tabs
             ul
-              li: span 
+              li.active
+                +icons('#ic_house')
+                | дома
+              li
+                +icons('#ic_area')
+                | участки
           .catalog-park__content
             .catalog-park__item-tab
               .catalog-park__list
@@ -87,28 +95,42 @@ block content
             .catalog-park__item-tab
   section.section-general-plan
     .container
-      .section-title Генплан поселка
-      .general-plan
-        .general-plan__image
-          +bgimage('/img/common/general-plan.jpg')
-        .general-plan__action
-          .general-plan__find: +icons('#ic_loupe')
-          .general-plan__zoom-inc: +icons('#ic_plus')
-          .general-plan__zoom-dec: +icons('#ic_minus')
+      .section-title
+        h2  Генплан поселка
+        span Генплан поселка
+    .general-plan
+      .general-plan__image
+        +bgimage('/img/common/general-plan.jpg')
+      .general-plan__action
+        .general-plan__find: +icons('#ic_loupe')
+        .general-plan__zoom-inc: +icons('#ic_plus')
+        .general-plan__zoom-dec: +icons('#ic_minus')
   section.section-sales-team
     .container
-      .section-title Команда отдела продаж
+      .section-title
+        h2  Команда отдела продаж
+        span Команда отдела продаж
       .sales-team
         .sales-team__image: +bgimage('/img/common/manager.png')
         .sales-team__slider
-          .swiper-container
-            .swiper-wrapper
-              .swiper-slide
-                .sales-team-slide
-                  .sales-team-slide__desc Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  
-                  .sales-team-slide__name Александра
-                  .sales-team-slide__spec Менеджер по продажам
-  section.section-signup
+          .team-slider
+            .team-slider-prev
+              .arrow-white: +icons('#ic_prev-swiper')
+              .brackets-left
+            .team-slider-main
+              .swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .sales-team-slide
+                      .sales-team-slide__desc Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  
+                      .sales-team-slide__name Александра
+                      .sales-team-slide__spec Менеджер по продажам
+            .team-slider-next
+              .brackets-right
+              .arrow-white: +icons('#ic_next-swiper')
+          .team-callback
+            button.btn.btn-line вопрос брокеру/эксперту 
+  section.section-signup(style="background-image: url('../img/common/signup.jpg')")
     .container
       .signup__title Запишитесь на экскурсию
       .signup__subtitle Укажите свои контакты и менеджер свяжится с вами для уточнения удобного времени экскурсии.
@@ -120,8 +142,10 @@ block content
               .form__subitem: input(type="tel" placeholder="+7___-___-__-__")
               .form__subitem: button.btn.btn-blue Отправить
   section.section-gallery
-    .container
-      .section-title Галерея
+    .container-full
+      .section-title
+        h2  Галерея
+        span Галерея
       .section-gallery__swiper
         .swiper-container
           .swiper-wrapper
@@ -129,39 +153,74 @@ block content
               .gallery-slide
                 .gallery-slide__image: +bgimage('/img/gallery/g1.jpg')
                 .gallery-slide__caption Парк
+            .swiper-slide
+              .gallery-slide
+                .gallery-slide__image: +bgimage('/img/gallery/g2.jpg')
+                .gallery-slide__caption Входная группа
+            .swiper-slide
               .gallery-slide
                 .gallery-slide__image: +bgimage('/img/gallery/g1.jpg')
+                .gallery-slide__caption Парк
+            .swiper-slide
+              .gallery-slide
+                .gallery-slide__image: +bgimage('/img/gallery/g2.jpg')
                 .gallery-slide__caption Входная группа
-      .section-gallery__nav
-        .gallery-nav__counter
-        .gallery-nav__prev: +icons('#ic_prev-swiper')
-        .gallery-nav__next: +icons('#ic_next-swiper')
+      .container
+        .section-gallery__nav
+          .gallery-nav__counter 1 из 17
+          .gallery-nav__prev: +icons('#ic_prev-swiper')
+          .gallery-nav__next: +icons('#ic_next-swiper')
   section.section-video
     .container
-      .section-title Видео обзор поселка "Ренессанс Парк”
+      .section-title 
+        h2 Видео обзор поселка "Ренессанс Парк”
+        span Видео обзор поселка
       +video('#idyoutube')
 
   section.section-infrastructure
     .container
-      .section-title Инфраструктура
+      .section-title 
+        h2 Инфраструктура
+        span Инфраструктура
       .infrastructure
         .infrastructure__swiper
-          .swiper-container
-            .swiper-wrapper
-              .swiper-slide
-                .infrast-item
-                  .infrast-item__desc
-                    .infrast-item__title Природа
-                    .infrast-item__text В поселке предусмотрена озелененная прогулочная зона с утонченными скульптурами, аллеями и цветниками.              
-                  .infrast-item__image
-                    .circle-image
-                      .circle-image__big: +bgimage('/img/common/inf.jpg')
-                      .circle-image__min: +bgimage('/img/common/inf.jpg')
+          .infr-slider
+            .infr-slider-prev
+              .arrow-white: +icons('#ic_prev-swiper-blue')
+              .brackets-left
+            .infr-slider-main
+              .swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .infrast-item
+                      .infrast-item__desc
+                        .infrast-item__title Природа
+                        .infrast-item__text В поселке предусмотрена озелененная прогулочная зона с утонченными скульптурами, аллеями и цветниками.              
+                      .infrast-item__image
+                        .circle-image
+                          .circle-image__big: +bgimage('/img/common/inf.jpg')
+                          .circle-image__min: +bgimage('/img/common/inf.jpg')
+                  .swiper-slide
+                    .infrast-item
+                      .infrast-item__desc
+                        .infrast-item__title Природа
+                        .infrast-item__text В поселке предусмотрена озелененная прогулочная зона с утонченными скульптурами, аллеями и цветниками.              
+                      .infrast-item__image
+                        .circle-image
+                          .circle-image__big: +bgimage('../img/gallery/g1.jpg')
+                          .circle-image__min: +bgimage('../img/gallery/g1.jpg')
+            .infr-slider-next
+              .brackets-right
+              .arrow-white: +icons('#ic_next-swiper-blue')
 
-  section.section-download
+
+  section.section-download(style="background-image: url('../img/common/download-bg.jpg')")
     .container
       .download__main
         .download__image: +bgimage('../img/common/laptop.png')
+        .download__text
+          .download__title Скачайте презентацию коттеджного посёлка «Ренессанс парк»
+          .download__subtitle Обновлен: 11 Февраля 2021 
       .download__form
         form(action='#' method='POST')
           .form
@@ -169,27 +228,30 @@ block content
               .form__subitem: input(type="name" placeholder="Имя")
               .form__subitem: input(type="tel" placeholder="+7___-___-__-__")
               .form__subitem: button.btn.btn-blue Получить презентацию
-            .form__item Получите презентацию участков от наших экспертов
+            .form__item: .form-text Получите презентацию участков от наших экспертов
 
   section.section-contacts
     .container
-      .section-title Расположение поселка
-      .section-contacts__text
-        .section-contacts__address Поселок «Ренессанс Парк» расположен в 19 км от МКАД по Новорижскому шоссе 
-        .section-contacts__sep
-        .section-contacts__phone
-          p Круглосуточная горячая линия: 
-          a(href='tel:+74950851664') +74950851664
-        .section-contacts__callback
-          .section-contacts__btn
-            button.btn.btn-line Заказать звонок
-          .section-contacts__msgr
-            a(href='#'): +icons('#ic_wa')
-            a(href='#'): +icons('#ic_tg')
-      .section-contacts__image
-        .circle-image
-          .circle-image__big: +bgimage('/img/common/inf.jpg')
-          .circle-image__min: +bgimage('/img/common/inf.jpg')
+      .section-title 
+        h2 Расположение поселка
+        span Расположение поселка
+      .section-contacts__info
+        .section-contacts__text
+          .section-contacts__address Поселок «Ренессанс Парк» расположен в 19 км от МКАД по Новорижскому шоссе 
+          .section-contacts__sep
+          .section-contacts__phone
+            p Круглосуточная горячая линия: 
+            a(href='tel:+74950851664') +7 (495) 085-16-64
+          .section-contacts__callback
+            .section-contacts__btn
+              button.btn.btn-line Заказать звонок
+            .section-contacts__msgr
+              a(href='#'): +icons('#ic_wa', 14)
+              a(href='#'): +icons('#ic_tg', 14)
+        .section-contacts__image
+          .circle-image
+            .circle-image__big: +bgimage('/img/common/cr2.jpg')
+            .circle-image__min: +bgimage('/img/common/cr2.jpg')
       .section-contacts__map
         span(style="padding-top: 300px; background-color: #eee;")
 
@@ -211,7 +273,7 @@ block footer
       .footer__info
         .footer__info-text Нужна помощь? Позвоните или напишите в чат эксперту проекта
         .footer__callback
-          .footer__phone: a(href='tel:+74950851664') +7(495)085-16-64
+          .footer__phone: a(href='tel:+74950851664') +7 (495) 085-16-64
           .footer__msgr
             a(href='#'): +icons('#ic_wa')
             a(href='#'): +icons('#ic_tg')

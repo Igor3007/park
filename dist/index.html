@@ -60,21 +60,20 @@
               </ul>
             </div>
             <div class="header-top__callback">
-              <button class="btn btn-line">Заказать звонок</button>
+              <button class="btn btn-line btn-small">Заказать звонок</button>
             </div>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="header-section">
+      <section class="header-section" style="background-image: url(../img/common/header-bg.jpg)">
         <div class="container">
           <div class="header-content">
             <div class="header-content__title"> 
               <h1>Ренессанс Парк</h1>
               <p>Коттеджный поселок</p>
             </div>
-            <div class="header-content__info"></div>
             <div class="header-content__info">
               <div class="content-info">
                 <div class="content-info__list">
@@ -87,7 +86,7 @@
                     <div class="content-info__desc">минимальная цена дома</div>
                   </div>
                   <div class="content-info__item">
-                    <div class="content-info__digit">  От <span>350</span> до <span>800</span> м² </div>
+                    <div class="content-info__digit">  От <span>350</span> до <br> <span>800</span> м² </div>
                     <div class="content-info__desc">минимальная площадь участков</div>
                   </div>
                   <div class="content-info__item">
@@ -99,7 +98,7 @@
             </div>
             <div class="header-content__form"> 
               <div class="header-form">
-                <div class="header-form__image"><span class="bgimage" style="background-image: url(/img/)"></span>
+                <div class="header-form__image"><span class="bgimage" style="background-image: url(../img/common/laptop.png)"></span>
                 </div>
                 <div class="header-form__form">
                   <form>
@@ -115,7 +114,9 @@
                           <button class="btn btn-blue">Получить презентацию</button>
                         </div>
                       </div>
-                      <div class="form__item">Получите презентацию участков от наших экспертов</div>
+                      <div class="form__item">
+                        <div class="form-text">Получите презентацию участков от наших экспертов</div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -126,9 +127,11 @@
       </section>
       <section class="section-about-park">
         <div class="container">
-          <div class="section-title">О поселке “Ренессанс Парк”</div>
+          <div class="section-title"> 
+            <h2>О поселке “Ренессанс Парк”</h2><span>о поселке</span>
+          </div>
           <div class="about-park">
-            <div class="about-park__image"><img src="/img/common/"></div>
+            <div class="about-park__image"><img src="/img/common/about.png"></div>
             <div class="about-park__desc">
               <p>«Ренессанс Парк» – это филигранно ограненная красота природы и возможность вести активный образ жизни, не замыкаясь в уединении. Дома в стиле европейских аристократических резиденций, собственный пляж с белым кварцевым песком, премиальная инфраструктура других посёлков Villagio Estate – повседневность для жителей «Ренессанс Парк». Жить здесь, значит, окружить себя аурой красоты и здоровья, созданной самой природой. Посёлок вытянут вдоль векового соснового леса, который наполняет окружающее пространство фитонцидами – мощнейшим природным антисептиком, уничтожающим патогенные микроорганизмы. Жители «Ренессанс Парка» ежедневно укрепляют свой иммунитет, просто вдыхая целебный воздух хвойного леса. </p>
             </div>
@@ -137,12 +140,23 @@
       </section>
       <section class="section-catalog-park">
         <div class="container">
-          <div class="section-title">Дома в поселке “Ренессанс Парк”</div>
+          <div class="section-title">
+            <h2> Дома в поселке “Ренессанс Парк”</h2><span>Дома в поселке “Ренессанс Парк”</span>
+          </div>
           <div class="catalog-park">
             <div class="catalog-park__wrp">
               <div class="catalog-park__tabs">
                 <ul>
-                  <li><span> </span></li>
+                  <li class="active">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_house"></use>
+                    </svg>дома
+                  </li>
+                  <li>
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_area"></use>
+                    </svg>участки
+                  </li>
                 </ul>
               </div>
               <div class="catalog-park__content">
@@ -150,7 +164,7 @@
                   <div class="catalog-park__list">
                     <div class="catalog-park__item">
                       <div class="minicard">
-                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/undefined.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
                         </div>
                         <div class="minicard__desc">
                           <div class="minicard__props">
@@ -162,7 +176,30 @@
                           </div>
                           <div class="minicard__price">
                             <div class="minicard__usd">1 0016 811 $</div>
-                            <div class="minicard__bub"> 66 977 341 руб</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
+                          </div>
+                        </div>
+                        <div class="minicard__btn">
+                          <button class="btn btn-line btn-full">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-park__item">
+                      <div class="minicard minicard--blur">
+                        <div class="minicard__blur"><span>Продано</span></div>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/2.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        </div>
+                        <div class="minicard__desc">
+                          <div class="minicard__props">
+                            <ul>
+                              <li>Отделка: <span>Без отделки</span></li>
+                              <li>Площадь: <span>775 м2</span></li>
+                              <li>Участок: <span>23 сот.</span></li>
+                            </ul>
+                          </div>
+                          <div class="minicard__price">
+                            <div class="minicard__usd">1 0016 811 $</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
                           </div>
                         </div>
                         <div class="minicard__btn">
@@ -172,7 +209,7 @@
                     </div>
                     <div class="catalog-park__item">
                       <div class="minicard">
-                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/undefined.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/3.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
                         </div>
                         <div class="minicard__desc">
                           <div class="minicard__props">
@@ -184,7 +221,30 @@
                           </div>
                           <div class="minicard__price">
                             <div class="minicard__usd">1 0016 811 $</div>
-                            <div class="minicard__bub"> 66 977 341 руб</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
+                          </div>
+                        </div>
+                        <div class="minicard__btn">
+                          <button class="btn btn-line btn-full">Подробнее</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="catalog-park__item">
+                      <div class="minicard minicard--blur">
+                        <div class="minicard__blur"><span>Закрытая <br> продажа</span></div>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/4.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        </div>
+                        <div class="minicard__desc">
+                          <div class="minicard__props">
+                            <ul>
+                              <li>Отделка: <span>Без отделки</span></li>
+                              <li>Площадь: <span>775 м2</span></li>
+                              <li>Участок: <span>23 сот.</span></li>
+                            </ul>
+                          </div>
+                          <div class="minicard__price">
+                            <div class="minicard__usd">1 0016 811 $</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
                           </div>
                         </div>
                         <div class="minicard__btn">
@@ -194,7 +254,7 @@
                     </div>
                     <div class="catalog-park__item">
                       <div class="minicard">
-                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/undefined.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/3.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
                         </div>
                         <div class="minicard__desc">
                           <div class="minicard__props">
@@ -206,7 +266,7 @@
                           </div>
                           <div class="minicard__price">
                             <div class="minicard__usd">1 0016 811 $</div>
-                            <div class="minicard__bub"> 66 977 341 руб</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
                           </div>
                         </div>
                         <div class="minicard__btn">
@@ -216,7 +276,7 @@
                     </div>
                     <div class="catalog-park__item">
                       <div class="minicard">
-                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/undefined.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
+                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/1.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
                         </div>
                         <div class="minicard__desc">
                           <div class="minicard__props">
@@ -228,51 +288,7 @@
                           </div>
                           <div class="minicard__price">
                             <div class="minicard__usd">1 0016 811 $</div>
-                            <div class="minicard__bub"> 66 977 341 руб</div>
-                          </div>
-                        </div>
-                        <div class="minicard__btn">
-                          <button class="btn btn-line btn-full">Подробнее</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog-park__item">
-                      <div class="minicard">
-                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/undefined.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
-                        </div>
-                        <div class="minicard__desc">
-                          <div class="minicard__props">
-                            <ul>
-                              <li>Отделка: <span>Без отделки</span></li>
-                              <li>Площадь: <span>775 м2</span></li>
-                              <li>Участок: <span>23 сот.</span></li>
-                            </ul>
-                          </div>
-                          <div class="minicard__price">
-                            <div class="minicard__usd">1 0016 811 $</div>
-                            <div class="minicard__bub"> 66 977 341 руб</div>
-                          </div>
-                        </div>
-                        <div class="minicard__btn">
-                          <button class="btn btn-line btn-full">Подробнее</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="catalog-park__item">
-                      <div class="minicard">
-                        <div class="minicard__image"><span class="bgimage" style="background-image: url(/img/catalog/undefined.jpg)"></span><span class="id-catalog">Дом ID 5613</span>
-                        </div>
-                        <div class="minicard__desc">
-                          <div class="minicard__props">
-                            <ul>
-                              <li>Отделка: <span>Без отделки</span></li>
-                              <li>Площадь: <span>775 м2</span></li>
-                              <li>Участок: <span>23 сот.</span></li>
-                            </ul>
-                          </div>
-                          <div class="minicard__price">
-                            <div class="minicard__usd">1 0016 811 $</div>
-                            <div class="minicard__bub"> 66 977 341 руб</div>
+                            <div class="minicard__rub"> 66 977 341 руб</div>
                           </div>
                         </div>
                         <div class="minicard__btn">
@@ -290,53 +306,80 @@
       </section>
       <section class="section-general-plan">
         <div class="container">
-          <div class="section-title">Генплан поселка</div>
-          <div class="general-plan">
-            <div class="general-plan__image"><span class="bgimage" style="background-image: url(/img/common/general-plan.jpg)"></span>
+          <div class="section-title">
+            <h2> Генплан поселка</h2><span>Генплан поселка</span>
+          </div>
+        </div>
+        <div class="general-plan">
+          <div class="general-plan__image"><span class="bgimage" style="background-image: url(/img/common/general-plan.jpg)"></span>
+          </div>
+          <div class="general-plan__action">
+            <div class="general-plan__find">
+              <svg width="25" height="25">
+                <use xlink:href="/img/sprites/sprite.svg#ic_loupe"></use>
+              </svg>
             </div>
-            <div class="general-plan__action">
-              <div class="general-plan__find">
-                <svg width="25" height="25">
-                  <use xlink:href="/img/sprites/sprite.svg#ic_loupe"></use>
-                </svg>
-              </div>
-              <div class="general-plan__zoom-inc">
-                <svg width="25" height="25">
-                  <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
-                </svg>
-              </div>
-              <div class="general-plan__zoom-dec">
-                <svg width="25" height="25">
-                  <use xlink:href="/img/sprites/sprite.svg#ic_minus"></use>
-                </svg>
-              </div>
+            <div class="general-plan__zoom-inc">
+              <svg width="25" height="25">
+                <use xlink:href="/img/sprites/sprite.svg#ic_plus"></use>
+              </svg>
+            </div>
+            <div class="general-plan__zoom-dec">
+              <svg width="25" height="25">
+                <use xlink:href="/img/sprites/sprite.svg#ic_minus"></use>
+              </svg>
             </div>
           </div>
         </div>
       </section>
       <section class="section-sales-team">
         <div class="container">
-          <div class="section-title">Команда отдела продаж</div>
+          <div class="section-title">
+            <h2> Команда отдела продаж</h2><span>Команда отдела продаж</span>
+          </div>
           <div class="sales-team">
             <div class="sales-team__image"><span class="bgimage" style="background-image: url(/img/common/manager.png)"></span>
             </div>
             <div class="sales-team__slider">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="sales-team-slide">
-                      <div class="sales-team-slide__desc">Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  </div>
-                      <div class="sales-team-slide__name">Александра</div>
-                      <div class="sales-team-slide__spec">Менеджер по продажам</div>
+              <div class="team-slider">
+                <div class="team-slider-prev">
+                  <div class="arrow-white">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_prev-swiper"></use>
+                    </svg>
+                  </div>
+                  <div class="brackets-left"></div>
+                </div>
+                <div class="team-slider-main">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="sales-team-slide">
+                          <div class="sales-team-slide__desc">Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  </div>
+                          <div class="sales-team-slide__name">Александра</div>
+                          <div class="sales-team-slide__spec">Менеджер по продажам</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div class="team-slider-next">
+                  <div class="brackets-right"></div>
+                  <div class="arrow-white">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_next-swiper"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="team-callback">
+                <button class="btn btn-line">вопрос брокеру/эксперту </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section-signup">
+      <section class="section-signup" style="background-image: url('../img/common/signup.jpg')">
         <div class="container">
           <div class="signup__title">Запишитесь на экскурсию</div>
           <div class="signup__subtitle">Укажите свои контакты и менеджер свяжится с вами для уточнения удобного времени экскурсии.</div>
@@ -360,8 +403,10 @@
         </div>
       </section>
       <section class="section-gallery">
-        <div class="container">
-          <div class="section-title">Галерея</div>
+        <div class="container-full">
+          <div class="section-title">
+            <h2> Галерея</h2><span>Галерея</span>
+          </div>
           <div class="section-gallery__swiper">
             <div class="swiper-container">
               <div class="swiper-wrapper">
@@ -371,8 +416,24 @@
                     </div>
                     <div class="gallery-slide__caption">Парк</div>
                   </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-slide">
+                    <div class="gallery-slide__image"><span class="bgimage" style="background-image: url(/img/gallery/g2.jpg)"></span>
+                    </div>
+                    <div class="gallery-slide__caption">Входная группа</div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
                   <div class="gallery-slide">
                     <div class="gallery-slide__image"><span class="bgimage" style="background-image: url(/img/gallery/g1.jpg)"></span>
+                    </div>
+                    <div class="gallery-slide__caption">Парк</div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-slide">
+                    <div class="gallery-slide__image"><span class="bgimage" style="background-image: url(/img/gallery/g2.jpg)"></span>
                     </div>
                     <div class="gallery-slide__caption">Входная группа</div>
                   </div>
@@ -380,26 +441,30 @@
               </div>
             </div>
           </div>
-          <div class="section-gallery__nav">
-            <div class="gallery-nav__counter"></div>
-            <div class="gallery-nav__prev">
-              <svg width="25" height="25">
-                <use xlink:href="/img/sprites/sprite.svg#ic_prev-swiper"></use>
-              </svg>
-            </div>
-            <div class="gallery-nav__next">
-              <svg width="25" height="25">
-                <use xlink:href="/img/sprites/sprite.svg#ic_next-swiper"></use>
-              </svg>
+          <div class="container">
+            <div class="section-gallery__nav">
+              <div class="gallery-nav__counter">1 из 17</div>
+              <div class="gallery-nav__prev">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_prev-swiper"></use>
+                </svg>
+              </div>
+              <div class="gallery-nav__next">
+                <svg width="25" height="25">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_next-swiper"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section class="section-video">
         <div class="container">
-          <div class="section-title">Видео обзор поселка "Ренессанс Парк”</div>
+          <div class="section-title"> 
+            <h2>Видео обзор поселка "Ренессанс Парк”</h2><span>Видео обзор поселка</span>
+          </div>
           <div class="video" data-id="function link() { [native code] }">
-            <div class="video__preview"><span class="bgimage" style="background-image: url(https://i1.ytimg.com/vi/undefined/hqdefault.jpg)"></span>
+            <div class="video__preview"><span class="bgimage" style="background-image: url(../img/common/video-preview.jpg)"></span>
             </div>
             <div class="video__action">
               <div class="video__button">
@@ -413,26 +478,64 @@
       </section>
       <section class="section-infrastructure">
         <div class="container">
-          <div class="section-title">Инфраструктура</div>
+          <div class="section-title"> 
+            <h2>Инфраструктура</h2><span>Инфраструктура</span>
+          </div>
           <div class="infrastructure">
             <div class="infrastructure__swiper">
-              <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="infrast-item">
-                      <div class="infrast-item__desc">
-                        <div class="infrast-item__title">Природа</div>
-                        <div class="infrast-item__text">В поселке предусмотрена озелененная прогулочная зона с утонченными скульптурами, аллеями и цветниками.              </div>
-                      </div>
-                      <div class="infrast-item__image">
-                        <div class="circle-image">
-                          <div class="circle-image__big"><span class="bgimage" style="background-image: url(/img/common/inf.jpg)"></span>
+              <div class="infr-slider">
+                <div class="infr-slider-prev">
+                  <div class="arrow-white">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_prev-swiper-blue"></use>
+                    </svg>
+                  </div>
+                  <div class="brackets-left"></div>
+                </div>
+                <div class="infr-slider-main">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="infrast-item">
+                          <div class="infrast-item__desc">
+                            <div class="infrast-item__title">Природа</div>
+                            <div class="infrast-item__text">В поселке предусмотрена озелененная прогулочная зона с утонченными скульптурами, аллеями и цветниками.              </div>
                           </div>
-                          <div class="circle-image__min"><span class="bgimage" style="background-image: url(/img/common/inf.jpg)"></span>
+                          <div class="infrast-item__image">
+                            <div class="circle-image">
+                              <div class="circle-image__big"><span class="bgimage" style="background-image: url(/img/common/inf.jpg)"></span>
+                              </div>
+                              <div class="circle-image__min"><span class="bgimage" style="background-image: url(/img/common/inf.jpg)"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="infrast-item">
+                          <div class="infrast-item__desc">
+                            <div class="infrast-item__title">Природа</div>
+                            <div class="infrast-item__text">В поселке предусмотрена озелененная прогулочная зона с утонченными скульптурами, аллеями и цветниками.              </div>
+                          </div>
+                          <div class="infrast-item__image">
+                            <div class="circle-image">
+                              <div class="circle-image__big"><span class="bgimage" style="background-image: url(../img/gallery/g1.jpg)"></span>
+                              </div>
+                              <div class="circle-image__min"><span class="bgimage" style="background-image: url(../img/gallery/g1.jpg)"></span>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="infr-slider-next">
+                  <div class="brackets-right"></div>
+                  <div class="arrow-white">
+                    <svg width="25" height="25">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_next-swiper-blue"></use>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -440,10 +543,14 @@
           </div>
         </div>
       </section>
-      <section class="section-download">
+      <section class="section-download" style="background-image: url('../img/common/download-bg.jpg')">
         <div class="container">
           <div class="download__main">
             <div class="download__image"><span class="bgimage" style="background-image: url(../img/common/laptop.png)"></span>
+            </div>
+            <div class="download__text">
+              <div class="download__title">Скачайте презентацию коттеджного посёлка «Ренессанс парк»</div>
+              <div class="download__subtitle">Обновлен: 11 Февраля 2021 </div>
             </div>
           </div>
           <div class="download__form">
@@ -460,7 +567,9 @@
                     <button class="btn btn-blue">Получить презентацию</button>
                   </div>
                 </div>
-                <div class="form__item">Получите презентацию участков от наших экспертов</div>
+                <div class="form__item">
+                  <div class="form-text">Получите презентацию участков от наших экспертов</div>
+                </div>
               </div>
             </form>
           </div>
@@ -468,31 +577,35 @@
       </section>
       <section class="section-contacts">
         <div class="container">
-          <div class="section-title">Расположение поселка</div>
-          <div class="section-contacts__text">
-            <div class="section-contacts__address">Поселок «Ренессанс Парк» расположен в 19 км от МКАД по Новорижскому шоссе </div>
-            <div class="section-contacts__sep"></div>
-            <div class="section-contacts__phone">
-              <p>Круглосуточная горячая линия: </p><a href="tel:+74950851664">+74950851664</a>
-            </div>
-            <div class="section-contacts__callback">
-              <div class="section-contacts__btn">
-                <button class="btn btn-line">Заказать звонок</button>
-              </div>
-              <div class="section-contacts__msgr"><a href="#">
-                  <svg width="25" height="25">
-                    <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
-                  </svg></a><a href="#">
-                  <svg width="25" height="25">
-                    <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
-                  </svg></a></div>
-            </div>
+          <div class="section-title"> 
+            <h2>Расположение поселка</h2><span>Расположение поселка</span>
           </div>
-          <div class="section-contacts__image">
-            <div class="circle-image">
-              <div class="circle-image__big"><span class="bgimage" style="background-image: url(/img/common/inf.jpg)"></span>
+          <div class="section-contacts__info">
+            <div class="section-contacts__text">
+              <div class="section-contacts__address">Поселок «Ренессанс Парк» расположен в 19 км от МКАД по Новорижскому шоссе </div>
+              <div class="section-contacts__sep"></div>
+              <div class="section-contacts__phone">
+                <p>Круглосуточная горячая линия: </p><a href="tel:+74950851664">+7 (495) 085-16-64</a>
               </div>
-              <div class="circle-image__min"><span class="bgimage" style="background-image: url(/img/common/inf.jpg)"></span>
+              <div class="section-contacts__callback">
+                <div class="section-contacts__btn">
+                  <button class="btn btn-line">Заказать звонок</button>
+                </div>
+                <div class="section-contacts__msgr"><a href="#">
+                    <svg width="14" height="14">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>
+                    </svg></a><a href="#">
+                    <svg width="14" height="14">
+                      <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="section-contacts__image">
+              <div class="circle-image">
+                <div class="circle-image__big"><span class="bgimage" style="background-image: url(/img/common/cr2.jpg)"></span>
+                </div>
+                <div class="circle-image__min"><span class="bgimage" style="background-image: url(/img/common/cr2.jpg)"></span>
+                </div>
               </div>
             </div>
           </div>
@@ -522,7 +635,7 @@
           <div class="footer__info">
             <div class="footer__info-text">Нужна помощь? Позвоните или напишите в чат эксперту проекта</div>
             <div class="footer__callback">
-              <div class="footer__phone"><a href="tel:+74950851664">+7(495)085-16-64</a></div>
+              <div class="footer__phone"><a href="tel:+74950851664">+7 (495) 085-16-64</a></div>
               <div class="footer__msgr"><a href="#">
                   <svg width="25" height="25">
                     <use xlink:href="/img/sprites/sprite.svg#ic_wa"></use>

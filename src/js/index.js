@@ -33,57 +33,27 @@ $(document).ready(function() {
 Swiper.use([Pagination, Navigation, Thumbs, Autoplay]);
 /* design banner */
 
-const bannerDesign = new Swiper('.banner-swiper', { 
-    autoplay: {
-        delay: 5000,
-      },
-    pagination: {
-        el: '.swiper-dots-progress',
-        clickable: true,
-        type: 'bullets',
-        
-        renderBullet: function (index, className) {
 
-            console.log(this.params.autoplay.delay)
+var swiper = new Swiper('.section-gallery__swiper .swiper-container', {
 
-            return '<div class="' + className + '"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">\
-            <circle class="progress-bg" cx="9" cy="9" r="8" stroke="black" stroke-opacity="0.3" stroke-width="2"/>\
-            <circle class="progress-bar" style="animation-duration: '+(this.params.autoplay.delay+500)+'ms;"  cx="9" cy="9" r="8" stroke="#fe3e77" stroke-width="2"/>\
-            <circle class="progress-dot" cx="9" cy="9" r="5" /></circle></svg></div>';
-        },
-    },
-     
+  slidesPerView: 2.2,
+  spaceBetween: 30,
+  centeredSlides: true,
+  slidesPerGroupSkip: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
 });
 
-const homeGallery = new Swiper('.gallery__list', { 
-     
-    pagination: {
-        el: '.swiper-dots',
-        clickable: true,
-        dynamicBullets: true,
-    },
+var swiper2 = new Swiper('.infr-slider-main .swiper-container', {
 
-    navigation: {
-        nextEl: '.swiper-nav__next',
-        prevEl: '.swiper-nav__prev',
-      },
+  slidesPerView: 1,
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.infr-slider-next',
+    prevEl: '.infr-slider-prev',
+  },
 
-    slidesPerView: 1,
-    spaceBetween: 14,
-      
-      breakpoints: {
-        '@0.00': {
-          slidesPerView: 1,
-        },
-        '@0.75': {
-          slidesPerView: 2,
-        },
-        '@1.00': {
-          slidesPerView: 3,
-        },
-        '@1.50': {
-          slidesPerView: 4,
-        },
-      }
-     
 });

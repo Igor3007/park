@@ -2226,48 +2226,22 @@ jquery__WEBPACK_IMPORTED_MODULE_4___default()(document).ready(function () {
 swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_3__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_3__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_3__["Thumbs"], swiper__WEBPACK_IMPORTED_MODULE_3__["Autoplay"]]);
 /* design banner */
 
-var bannerDesign = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.banner-swiper', {
-  autoplay: {
-    delay: 5000
-  },
+var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.section-gallery__swiper .swiper-container', {
+  slidesPerView: 2.2,
+  spaceBetween: 30,
+  centeredSlides: true,
+  slidesPerGroupSkip: 1,
   pagination: {
-    el: '.swiper-dots-progress',
-    clickable: true,
-    type: 'bullets',
-    renderBullet: function renderBullet(index, className) {
-      console.log(this.params.autoplay.delay);
-      return '<div class="' + className + '"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">\
-            <circle class="progress-bg" cx="9" cy="9" r="8" stroke="black" stroke-opacity="0.3" stroke-width="2"/>\
-            <circle class="progress-bar" style="animation-duration: ' + (this.params.autoplay.delay + 500) + 'ms;"  cx="9" cy="9" r="8" stroke="#fe3e77" stroke-width="2"/>\
-            <circle class="progress-dot" cx="9" cy="9" r="5" /></circle></svg></div>';
-    }
+    el: '.swiper-pagination',
+    clickable: true
   }
 });
-var homeGallery = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.gallery__list', {
-  pagination: {
-    el: '.swiper-dots',
-    clickable: true,
-    dynamicBullets: true
-  },
-  navigation: {
-    nextEl: '.swiper-nav__next',
-    prevEl: '.swiper-nav__prev'
-  },
+var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.infr-slider-main .swiper-container', {
   slidesPerView: 1,
-  spaceBetween: 14,
-  breakpoints: {
-    '@0.00': {
-      slidesPerView: 1
-    },
-    '@0.75': {
-      slidesPerView: 2
-    },
-    '@1.00': {
-      slidesPerView: 3
-    },
-    '@1.50': {
-      slidesPerView: 4
-    }
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.infr-slider-next',
+    prevEl: '.infr-slider-prev'
   }
 });
 
