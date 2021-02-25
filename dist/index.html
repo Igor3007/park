@@ -132,7 +132,14 @@
             <h2>О поселке “Ренессанс Парк”</h2><span>О поселке “Ренессанс Парк”</span>
           </div>
           <div class="about-park">
-            <div class="about-park__image"><img src="/img/common/about.png"></div>
+            <div class="about-park__image">
+              <div class="circle-image">
+                <div class="circle-image__big"><span class="bgimage" style="background-image: url(/img/common/b2.jpg)"></span>
+                </div>
+                <div class="circle-image__min"><span class="bgimage" style="background-image: url(/img/common/b2.jpg)"></span>
+                </div>
+              </div>
+            </div>
             <div class="about-park__desc">
               <p>«Ренессанс Парк» – это филигранно ограненная красота природы и возможность вести активный образ жизни, не замыкаясь в уединении. Дома в стиле европейских аристократических резиденций, собственный пляж с белым кварцевым песком, премиальная инфраструктура других посёлков Villagio Estate – повседневность для жителей «Ренессанс Парк». Жить здесь, значит, окружить себя аурой красоты и здоровья, созданной самой природой. Посёлок вытянут вдоль векового соснового леса, который наполняет окружающее пространство фитонцидами – мощнейшим природным антисептиком, уничтожающим патогенные микроорганизмы. Жители «Ренессанс Парка» ежедневно укрепляют свой иммунитет, просто вдыхая целебный воздух хвойного леса. </p>
             </div>
@@ -382,7 +389,8 @@
             <h2> Генплан поселка</h2><span>Генплан поселка</span>
           </div>
         </div>
-        <div class="general-plan">
+        <div class="general-plan__wrp"></div>
+        <div class="general-plan">   
           <div class="general-plan__image"><span class="bgimage" style="background-image: url(/img/common/general-plan.jpg)"></span>
           </div>
           <div class="general-plan__action">
@@ -400,6 +408,14 @@
               <svg width="25" height="25">
                 <use xlink:href="/img/sprites/sprite.svg#ic_minus"></use>
               </svg>
+            </div>
+          </div>
+          <div class="general-plan__circle">
+            <div class="circle-image">
+              <div class="circle-image__big"><span class="bgimage" style="background-image: url(/img/common/general-plan.jpg)"></span>
+              </div>
+              <div class="circle-image__min"><span class="bgimage" style="background-image: url(/img/common/general-plan.jpg)"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -753,12 +769,19 @@
             </nav>
           </div>
           <div class="mobile-menu__consult">
-            <div class="mobile-menu__manager"></div>
-            <div class="mobile-menu__text"></div>
+            <div class="mobile-menu__manager">
+              <div class="menu-manager__photo"> <span class="bgimage" style="background-image: url(../img/common/manager.jpg)"></span>
+              </div>
+              <div class="menu-manager__name">
+                <div class="menu-manager__name-title">Александра</div>
+                <div class="menu-manager__name-subtitle">Менеджер по продажам</div>
+              </div>
+            </div>
+            <div class="mobile-menu__text">Нужна помощь? <br> Позвоните или напишите в чат <br> эксперту проекта</div>
           </div>
           <div class="mobile-menu__phone"><a href="tel:+7 (495) 085-16-64">+7 (495) 085-16-64</a></div>
           <div class="mobile-menu__callback">
-            <button class="btn btn-small btn-line">Заказать звонок</button>
+            <button class="btn btn-line">Заказать звонок</button>
           </div>
           <div class="mobile-menu__msgr"><a href="#">
               <svg width="17" height="17">
@@ -768,6 +791,9 @@
                 <use xlink:href="/img/sprites/sprite.svg#ic_tg"></use>
               </svg></a></div>
         </div>
+      </div>
+      <div class="fix-consult">
+        <div class="fix-consult__photo"><a href="#"><span class="bgimage" style="background-image: url(../img/common/manager.jpg)"></span></a></div>
       </div>
     </footer>
     <script src="js/main.js?v=1.52"></script>

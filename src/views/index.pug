@@ -69,7 +69,10 @@ block content
         h2 О поселке “Ренессанс Парк”
         span О поселке “Ренессанс Парк”
       .about-park
-        .about-park__image: img(src="/img/common/about.png")
+        .about-park__image
+          .circle-image
+            .circle-image__big: +bgimage('/img/common/b2.jpg')
+            .circle-image__min: +bgimage('/img/common/b2.jpg')
         .about-park__desc
           p «Ренессанс Парк» – это филигранно ограненная красота природы и возможность вести активный образ жизни, не замыкаясь в уединении. Дома в стиле европейских аристократических резиденций, собственный пляж с белым кварцевым песком, премиальная инфраструктура других посёлков Villagio Estate – повседневность для жителей «Ренессанс Парк». Жить здесь, значит, окружить себя аурой красоты и здоровья, созданной самой природой. Посёлок вытянут вдоль векового соснового леса, который наполняет окружающее пространство фитонцидами – мощнейшим природным антисептиком, уничтожающим патогенные микроорганизмы. Жители «Ренессанс Парка» ежедневно укрепляют свой иммунитет, просто вдыхая целебный воздух хвойного леса. 
   section.section-catalog-park(style="background-image: url(../img/common/catalog-bg.png)")
@@ -101,13 +104,18 @@ block content
       .section-title
         h2  Генплан поселка
         span Генплан поселка
-    .general-plan
+    .general-plan__wrp
+    .general-plan    
       .general-plan__image
         +bgimage('/img/common/general-plan.jpg')
       .general-plan__action
         .general-plan__find: +icons('#ic_loupe')
         .general-plan__zoom-inc: +icons('#ic_plus')
         .general-plan__zoom-dec: +icons('#ic_minus')
+      .general-plan__circle
+        .circle-image
+          .circle-image__big: +bgimage('/img/common/general-plan.jpg')
+          .circle-image__min: +bgimage('/img/common/general-plan.jpg')
   section.section-sales-team
     .container
       .section-title
@@ -304,14 +312,24 @@ block footer
             li: a(href="#") Расположение поселка
       .mobile-menu__consult
         .mobile-menu__manager
-        .mobile-menu__text
+          .menu-manager__photo 
+            +bgimage('../img/common/manager.jpg')
+          .menu-manager__name
+            .menu-manager__name-title Александра
+            .menu-manager__name-subtitle Менеджер по продажам
+
+        .mobile-menu__text Нужна помощь? <br> Позвоните или напишите в чат <br> эксперту проекта
       .mobile-menu__phone
         a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
       .mobile-menu__callback
-        button.btn.btn-small.btn-line Заказать звонок
+        button.btn.btn-line Заказать звонок
       .mobile-menu__msgr
         a(href='#'): +icons('#ic_wa', 17)
         a(href='#'): +icons('#ic_tg', 17)
+  .fix-consult
+    .fix-consult__photo
+      a(href='#'): +bgimage('../img/common/manager.jpg')
+
 
 block scripts
   script(src="js/main.js?v=1.52")

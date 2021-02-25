@@ -75,14 +75,27 @@ Swiper.use([Pagination, Navigation, Thumbs, Autoplay]);
 
 var swiper = new Swiper('.section-gallery__swiper .swiper-container', {
 
-  slidesPerView: 2.2,
+  slidesPerView: 1.9,
   spaceBetween: 30,
-  centeredSlides: true,
+  centeredSlides: false,
   slidesPerGroupSkip: 1,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1.2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 1.9,
+    },
+  }
 
 });
 

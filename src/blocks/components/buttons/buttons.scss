@@ -16,6 +16,10 @@
     font-size: rem(13);
     letter-spacing: 0.05em;
 
+    @media screen and (max-width: $w1024) {
+        padding: 1.5em 3em;
+    }
+
     &:hover {
         opacity: 0.9;
     }

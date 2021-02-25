@@ -2360,13 +2360,26 @@ swiper__WEBPACK_IMPORTED_MODULE_3__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 /* design banner */
 
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.section-gallery__swiper .swiper-container', {
-  slidesPerView: 2.2,
+  slidesPerView: 1.9,
   spaceBetween: 30,
-  centeredSlides: true,
+  centeredSlides: false,
   slidesPerGroupSkip: 1,
   pagination: {
     el: '.swiper-pagination',
     clickable: true
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 1.2,
+      spaceBetween: 40
+    },
+    1024: {
+      slidesPerView: 1.9
+    }
   }
 });
 var swiper2 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.infr-slider-main .swiper-container', {

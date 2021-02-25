@@ -43,12 +43,18 @@
         resize: vertical;
     }
 
+    & .btn {
+        @media screen and (max-width: $w940) {
+            width: 100%;
+        }
+    }
+
     &__item {
 
         display: flex;
         align-items: center;
 
-        @media screen and (max-width: $w480) {
+        @media screen and (max-width: $w940) {
             flex-direction: column;
         }
 
@@ -93,7 +99,7 @@
             width: 100%;
         }
 
-        @media screen and (max-width: $w480) {
+        @media screen and (max-width: $w940) {
             margin-right: 0 !important;
         }
     }
@@ -366,7 +372,13 @@
         padding: 0.9em 1.2em;
         font-size: rem(18);
         border: 1px solid #ddd;
+
+        @media screen and (max-width: $w1024) {
+            padding: 0.85em 1.2em;
+        }
     }
+
+
 
 }
 
