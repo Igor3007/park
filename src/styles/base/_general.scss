@@ -612,12 +612,17 @@ ul {
         line-height: 85px;
         text-align: center;
         text-transform: uppercase;
+        white-space: nowrap;
 
         color: rgba(255, 255, 255, 0.1);
 
+        @media screen and (max-width: $w760) {
+            font-size: 50px;
+
+        }
+
         @media screen and (max-width: $w580) {
             display: none;
-
         }
 
     }
@@ -963,6 +968,17 @@ ul {
         display: flex;
         align-items: center;
 
+        @media screen and (max-width: $w760) {
+            right: auto;
+            left: 25px;
+        }
+
+        @media screen and (max-width: $w580) {
+            right: 25px;
+            left: 25px;
+            justify-content: center;
+        }
+
 
         & div {
             width: 60px;
@@ -984,6 +1000,8 @@ ul {
                     height: 18px;
                 }
             }
+
+
         }
 
     }
@@ -998,6 +1016,12 @@ ul {
 
         @media screen and (max-width: $w940) {
             right: -10px;
+        }
+
+        @media screen and (max-width: $w760) {
+            width: 75px;
+            height: 75px;
+            right: 20px;
         }
 
 
@@ -1078,7 +1102,7 @@ ul {
 
     &__name {
         font-weight: bold;
-        font-size: 26px;
+        font-size: 24px;
         line-height: 30px;
         display: flex;
         color: #FFFFFF;
@@ -1147,6 +1171,11 @@ ul {
 .team-slider-main {
     padding: 60px;
     max-width: 535px;
+
+    @media screen and (max-width: $w940) {
+        max-width: 435px;
+
+    }
 }
 
 .team-callback {
