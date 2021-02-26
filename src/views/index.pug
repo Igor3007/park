@@ -248,6 +248,10 @@ block content
             .form__item: .form-text Получите презентацию участков от наших экспертов
 
   section.section-contacts
+
+    script
+      include ../js/mapsetting.js
+
     .container
       .section-title 
         h2 Расположение поселка
@@ -270,7 +274,7 @@ block content
             .circle-image__big: +bgimage('/img/common/cr2.jpg')
             .circle-image__min: +bgimage('/img/common/cr2.jpg')
     .section-contacts__map
-      span(id="map-container" style="height: 500px; background-color: #eee;")
+      span(id="map-container" style="background-color: #eee;")
 
 block footer
   div.footer
@@ -281,12 +285,11 @@ block footer
           li: a(href='#') Дома/участки в поселке
           li: a(href='#') Генплан поселка
           li: a(href='#') Команда отдела продаж
-      .footer__list
-        ul
           li: a(href='#') Галерея
           li: a(href='#') Презентация
           li: a(href='#') Инфраструктура
           li: a(href='#') Расположение поселка
+
       .footer__info
         .footer__info-text Нужна помощь? <br> Позвоните или напишите в чат <br> эксперту проекта
         .footer__callback

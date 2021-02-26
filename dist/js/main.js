@@ -2369,13 +2369,17 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.section-galler
     clickable: true
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2,
+    0: {
+      slidesPerView: 1.1,
+      spaceBetween: 15
+    },
+    580: {
+      slidesPerView: 1.2,
       spaceBetween: 20
     },
-    768: {
+    940: {
       slidesPerView: 1.2,
-      spaceBetween: 40
+      spaceBetween: 20
     },
     1024: {
       slidesPerView: 1.9
@@ -2399,51 +2403,30 @@ var swiper3 = new swiper__WEBPACK_IMPORTED_MODULE_3__["default"]('.team-slider-m
   }
 });
 ymaps.ready(function () {
-  var myMap = new ymaps.Map('map-container', {
-    center: [55.751574, 37.573856],
-    zoom: 9,
-    controls: []
-  }, {
-    suppressMapOpenBlock: true
-  }),
-      // Создаём макет содержимого.
-  MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-    hintContent: 'Собственный значок метки',
-    balloonContent: 'Это красивая метка'
-  }, {
-    // Опции.
-    // Необходимо указать данный тип макета.
-    iconLayout: 'default#image',
-    // Своё изображение иконки метки.
-    iconImageHref: '/img/svg/ic_pen.svg',
-    // Размеры метки.
-    iconImageSize: [60, 60],
-    // Смещение левого верхнего угла иконки относительно
-    // её "ножки" (точки привязки).
-    iconImageOffset: [-30, -30]
-  }),
-      myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-    hintContent: 'Собственный значок метки с контентом',
-    balloonContent: 'А эта — новогодняя',
-    iconContent: '12'
-  }, {
-    // Опции.
-    // Необходимо указать данный тип макета.
-    iconLayout: 'default#imageWithContent',
-    // Своё изображение иконки метки.
-    iconImageHref: 'images/ball.png',
-    // Размеры метки.
-    iconImageSize: [48, 48],
-    // Смещение левого верхнего угла иконки относительно
-    // её "ножки" (точки привязки).
-    iconImageOffset: [-24, -24],
-    // Смещение слоя с содержимым относительно слоя с картинкой.
-    iconContentOffset: [15, 15],
-    // Макет содержимого.
-    iconContentLayout: MyIconContentLayout
-  });
-  myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
+  try {
+    var point = mapSetting.mapPointCoordinats.split(',');
+    var myMap = new ymaps.Map('map-container', {
+      center: point,
+      zoom: 10,
+      controls: []
+    }, {
+      suppressMapOpenBlock: true
+    }),
+        // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass('<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'),
+        myPlacemark = new ymaps.Placemark(point, {
+      hintContent: mapSetting.mapHintContent,
+      balloonContent: mapSetting.mapBaloonContent
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: '/img/svg/ic_pen.svg',
+      iconImageSize: [60, 60],
+      iconImageOffset: [-60, -30]
+    });
+    myMap.geoObjects.add(myPlacemark);
+  } catch (_unused) {
+    console.error('Нет координат для карты');
+  }
 });
 
 /***/ })
