@@ -27,9 +27,9 @@ block header
             li: a(href='#'): +icons('#ic_wa')
             li: a(href='#'): +icons('#ic_tg')
         .header-top__callback
-          button.btn.btn-line.btn-small Заказать звонок
+          button.btn.btn-line.btn-small(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
 block content
-  section.header-section(style="background-image: url(../img/common/header-bg.jpg)")
+  section.header-section(style="background-image: url(../img/common/header-bg.jpg)") 
     .container
       .header-content
         .header-content__title 
@@ -145,7 +145,7 @@ block content
               .brackets-right
               .arrow-white: +icons('#ic_next-swiper')
           .team-callback
-            button.btn.btn-line вопрос брокеру/эксперту 
+            button.btn.btn-line(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") вопрос брокеру/эксперту 
   section.section-signup(style="background-image: url('../img/common/signup.jpg')")
     .container
       .signup__title Запишитесь на экскурсию
@@ -265,7 +265,7 @@ block content
             a(href='tel:+74950851664') +7 (495) 085-16-64
           .section-contacts__callback
             .section-contacts__btn
-              button.btn.btn-line.btn-small Заказать звонок
+              button.btn.btn-line.btn-small(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
             .section-contacts__msgr
               a(href='#'): +icons('#ic_wa', 17)
               a(href='#'): +icons('#ic_tg', 17)
@@ -298,7 +298,7 @@ block footer
             a(href='#'): +icons('#ic_wa', 28)
             a(href='#'): +icons('#ic_tg', 28)
           .footer__btn
-            button.btn.btn-line.btn-white.btn-small Заказать звонок
+            button.btn.btn-line.btn-white.btn-small(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок 
   .mobile-menu
     .mobile-menu__wrp
       .mobile-menu__close: +icons('#ic_cross', 30)
@@ -325,14 +325,13 @@ block footer
       .mobile-menu__phone
         a(href='tel:+7 (495) 085-16-64') +7 (495) 085-16-64
       .mobile-menu__callback
-        button.btn.btn-line Заказать звонок
+        button.btn.btn-line(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
       .mobile-menu__msgr
         a(href='#'): +icons('#ic_wa', 17)
         a(href='#'): +icons('#ic_tg', 17)
   .fix-consult
     .fix-consult__photo
       a(href='#'): +bgimage('../img/common/manager.jpg')
-
 
 block scripts
   script(src="js/main.js?v=1.52")

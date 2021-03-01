@@ -22787,6 +22787,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/***/ }),
+
+/***/ "./node_modules/webpack-stream/node_modules/webpack/buildin/amd-options.js":
+/*!****************************************!*\
+  !*** (webpack)/buildin/amd-options.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
+module.exports = __webpack_amd_options__;
+
+/* WEBPACK VAR INJECTION */}.call(this, {}))
+
 /***/ })
 
 }]);

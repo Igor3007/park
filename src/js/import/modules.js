@@ -30,4 +30,3 @@ import "%modules%/mobile-menu-button/mobile-menu-button";
 /* basket */
 
 // import "%modules%/basket/basket-aside/basket-aside";
-// import "%modules%/mobile-menu-button/mobile-menu-button";
