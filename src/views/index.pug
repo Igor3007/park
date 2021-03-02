@@ -106,7 +106,7 @@ block content
         span Генплан поселка
     .general-plan__wrp
     .general-plan    
-      .general-plan__image
+      .general-plan__image.dragscroll
         +bgimage('/img/common/general-plan.jpg')
       .general-plan__action
         .general-plan__find: +icons('#ic_loupe')
@@ -295,8 +295,9 @@ block footer
         .footer__callback
           .footer__phone: a(href='tel:+74950851664') +7 (495) 085-16-64
           .footer__msgr
-            a(href='#'): +icons('#ic_wa', 28)
             a(href='#'): +icons('#ic_tg', 28)
+            a(href='#'): +icons('#ic_wa', 28)
+
           .footer__btn
             button.btn.btn-line.btn-white.btn-small(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок 
   .mobile-menu
@@ -327,8 +328,9 @@ block footer
       .mobile-menu__callback
         button.btn.btn-line(data-fancybox="" data-type="ajax" data-src="_popup-callback.html") Заказать звонок
       .mobile-menu__msgr
-        a(href='#'): +icons('#ic_wa', 17)
         a(href='#'): +icons('#ic_tg', 17)
+        a(href='#'): +icons('#ic_wa', 17)
+
   .fix-consult
     .fix-consult__photo
       a(href='#'): +bgimage('../img/common/manager.jpg')

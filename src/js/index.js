@@ -12,7 +12,7 @@ svgPolyfill();
 import $ from 'jquery';
 import './import/jquery.fancybox.min';
 import './import/list.js';
-import './import/touchswipe.js';
+import './import/dragscroll.js';
 
 
 $(document).ready(function () {
@@ -20,45 +20,72 @@ $(document).ready(function () {
     $('.header__phones').toggleClass('open')
   })
 
+  
+  if($(window).width() < 580){
+    $('.about-park__desc').append('<div class="more-desc" ><span>Весь текст</span></div>')
+  }
+
+  $(document).on('click', '.more-desc',  function(){
+    $('.about-park__desc').toggleClass('open')
+  })
+
   /* zoom image */
 
 function zoomImage (){
   this.scale = 1,
-  this.scaleMax = 2.5,
-  this.scaleMin = 1,
+  this.scaleMax = 5000,
+  this.scaleMin = $('.general-plan__image .bgimage').width(),
   this.axisX = 0,
   this.axisY = 0,
+  this.ch = 0.56, //отношение ширины r dscjnt
+  this.mapWidth = $('.general-plan__image .bgimage').width(),
+  this.mapHeight = this.mapWidth*this.ch
+
+  this.init = function() {
+    this.zoomRender();
+  }
 
   this.zoomInc = function() {
-    if ( this.scale < this.scaleMax) this.scale = this.scale + 0.25
+    if ( this.mapWidth < this.scaleMax) this.mapWidth = this.mapWidth + (this.mapWidth*0.2)
+    if ( this.mapWidth < this.scaleMax) this.mapHeight = this.mapHeight + (this.mapHeight*0.2)
     this.zoomRender()
   }
 
   this.zoomDec = function() {
-    if ( this.scale > this.scaleMin) this.scale = this.scale - 0.25
+    if ( this.mapWidth > this.scaleMin) this.mapWidth = this.mapWidth - (this.mapWidth*0.2)
+    if ( this.mapWidth > this.scaleMin) this.mapHeight = this.mapHeight - (this.mapHeight*0.2)
+    
+    if(this.mapWidth < this.scaleMin){
+      this.mapWidth = $('.general-plan__image').width()
+      this.mapHeight = $('.general-plan__image').height()
+    }
     this.zoomRender()
+
   }
 
-  this.zoomRender = function(direction, distance) {
+  this.zoomRender = function(direction, distance, phase) {
 
     if(!x) x = 0;
     if(!y) y = 0;
 
-    if(direction == 'up')  this.axisX = this.axisX - distance
-    if(direction == 'down')  this.axisX = this.axisX + distance
-    if(direction == 'left')  this.axisY = this.axisY - distance
-    if(direction == 'right')  this.axisY = this.axisY + distance
+    if(direction == 'up')  this.axisX =  distance
+    if(direction == 'down')  this.axisX = distance
+    if(direction == 'left')  this.axisY =  distance
+    if(direction == 'right')  this.axisY = distance
 
     var x = this.axisX;
     var y = this.axisY;
 
     $('.general-plan__image .bgimage').css({
-      'transform': 'scale('+this.scale+') translateX('+y+'px) translateY('+x+'px)'
+      width: this.mapWidth + 'px',
+      height: this.mapHeight + 'px',
     })
+
   }
 }
 
 const zoom = new zoomImage();
+zoom.init();
 
 $(document).on('click', '.general-plan__zoom-inc', function(event){
   zoom.zoomInc()
@@ -142,70 +169,24 @@ $(document).on('click', '.general-plan__zoom-dec', function(event){
   });
 
   /* ууууууууууууу */
-
-  /* swipe left menu */
-  $(".general-plan__image").swipe({
-    //Generic swipe handler for all directions
-    swipeStatus: function (event, phase, direction, distance, duration, fingers, fingerData, currentDirection) {
-
-        // $elemMenu = $('.left-menu');
-        // $elemMenuButton = $('.left-menu-buttons');
-
-        // $widthMenu = $elemMenu.width();
-        // $widthButton = $elemMenuButton.innerWidth();
-
-        // $dist = Math.floor((distance / $widthMenu) * 100);
-        // $dist = (100 - $dist);
-
-        // if (fingerData[0].start.x < 60) {
-
-        //     if (direction === 'right') {
-
-        //         if ($dist !== 100 && !$elemMenu.hasClass('open')) {
-        //             $elemMenu.css({
-        //                 'transform': 'translateX(-' + $dist + '%) translateX(' + $widthButton + 'px)',
-        //                 'z-index': '1000'
-        //             })
-        //         }
-
-        //         if ($dist <= 60) {
-        //             $elemMenu.removeAttr('style');
-        //             mobileMenu.onOpen();
-        //             return false;
-        //         }
-
-        //         if (phase === 'end') {
-        //             if (!$dist <= 60) {
-        //                 $elemMenu.removeAttr('style');
-        //             }
-        //         }
-        //     }
-        // }
-
-
-        // if (direction === 'left') {
-        //     mobileMenu.onClose();
-        // }
-
-      console.log(distance)
-      console.log(direction)
-
-      zoom.zoomRender(direction, distance)
-
-    },
-    //Default is 75px, set to 0 for demo so any distance triggers swipe
-    threshold: 25,
-    fingers: 'all',
-    excludedElements: "label, button, input, select, textarea"
-});
-
-
-
   
 });
 
 Swiper.use([Pagination, Navigation, Thumbs, Autoplay]);
 /* design banner */
+
+function updateFraction(slider) {
+  const { params, activeIndex } = slider;
+
+  slider.$el
+    .find(`.${params.pagination.currentClass}`)
+    .text(`${activeIndex + 1} - ${activeIndex + params.slidesPerView}`);
+
+  slider.$el
+    .find(`.${params.pagination.totalClass}`)
+    .text(slider.slides.length);
+}
+
 
 
 var swiper = new Swiper('.section-gallery__swiper .swiper-container', {
@@ -214,9 +195,17 @@ var swiper = new Swiper('.section-gallery__swiper .swiper-container', {
   spaceBetween: 30,
   centeredSlides: false,
   slidesPerGroupSkip: 1,
+  navigation: {
+    nextEl: '.gallery-nav__next',
+    prevEl: '.gallery-nav__prev',
+  },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.gallery-nav__counter',
+    type: 'fraction',
     clickable: true,
+    renderFraction: (currentClass, totalClass) => `
+      <span class="${currentClass}"></span> из
+      <span class="${totalClass}"></span>`,
   },
   breakpoints: {
     0: {
@@ -231,10 +220,21 @@ var swiper = new Swiper('.section-gallery__swiper .swiper-container', {
       slidesPerView: 1.2,
       spaceBetween: 20,
     },
-    1024: {
+    1025: {
       slidesPerView: 1.9,
     },
-  }
+  },
+  on: {
+    init() {
+      setTimeout(updateFraction, 0, this);
+    },
+    slideChange() {
+      updateFraction(this);
+    },
+    resize() {
+      updateFraction(this);
+    },
+  },
 
 });
 

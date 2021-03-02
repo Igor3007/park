@@ -2445,8 +2445,12 @@ section {
   white-space: nowrap;
 }
 
+.more-desc span {
+  text-decoration: underline;
+}
+
 .about-park {
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
 }
@@ -2459,6 +2463,7 @@ section {
 
 .about-park__desc {
   line-height: 180%;
+  font-size: 20px;
   z-index: 5;
 }
 
@@ -2470,10 +2475,26 @@ section {
 .section-catalog-park {
   background: #242424;
   color: #fff;
+  position: relative;
   padding-top: 6.66667rem;
   padding-bottom: 6.66667rem;
   background-repeat: no-repeat;
   background-position: right top;
+}
+
+.section-catalog-park::after {
+  content: 'Дом';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 400px;
+  line-height: 488px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.02);
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
 }
 
 .section-catalog-park .container {
@@ -2488,6 +2509,9 @@ section {
 .section-catalog-park .section-title span {
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.03);
+  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .section-catalog-park .section-title::after {
@@ -2604,7 +2628,7 @@ section {
 }
 
 .minicard__btn .btn {
-  max-height: 45px;
+  padding: 1.6em 3em 1.6em 3em;
 }
 
 .minicard__usd {
@@ -2633,7 +2657,7 @@ section {
 }
 
 .section-general-plan {
-  padding-top: 6.66667rem;
+  padding-top: 100px;
 }
 
 .section-general-plan .section-title span {
@@ -2650,16 +2674,18 @@ section {
 
 .general-plan__image {
   overflow: hidden;
+  height: 40vw;
+  min-height: 580px;
 }
 
 .general-plan__image .bgimage {
-  padding-top: 40%;
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: block;
   transition: 0.3s ease;
+  height: 40vw;
   min-height: 580px;
 }
 
@@ -2790,6 +2816,11 @@ section {
   align-items: center;
 }
 
+.arrow-white:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .arrow-white svg {
   fill: transparent;
   stroke: #fff;
@@ -2854,6 +2885,10 @@ section {
 
 .section-signup .form__subitem {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.section-signup .form__subitem input {
+  text-align: center;
 }
 
 .section-signup .form__subitem .btn {
@@ -2925,7 +2960,6 @@ section {
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
-  text-transform: uppercase;
 }
 
 .gallery-nav__prev svg,
@@ -2934,6 +2968,35 @@ section {
   stroke: #000;
   width: 60px;
   height: 60px;
+}
+
+.gallery-nav__prev:hover,
+.gallery-nav__next:hover {
+  cursor: pointer;
+}
+
+.gallery-nav__prev:hover svg,
+.gallery-nav__next:hover svg {
+  stroke: #057C85;
+}
+
+.gallery-nav__prev.swiper-button-disabled,
+.gallery-nav__next.swiper-button-disabled {
+  opacity: 0.4;
+}
+
+.gallery-nav__prev.swiper-button-disabled:hover,
+.gallery-nav__next.swiper-button-disabled:hover {
+  cursor: pointer;
+}
+
+.gallery-nav__prev.swiper-button-disabled:hover svg,
+.gallery-nav__next.swiper-button-disabled:hover svg {
+  stroke: #000;
+}
+
+.gallery-nav__counter {
+  text-align: right;
 }
 
 .section-gallery .section-title {
@@ -2954,8 +3017,8 @@ section {
 .section-video {
   background: #242424;
   color: #fff;
-  padding-top: 6.66667rem;
-  padding-bottom: 6.66667rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-video .section-title h2 {
@@ -3118,7 +3181,7 @@ section {
 
 .infr-slider .brackets-right,
 .infr-slider .brackets-left {
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.47);
   width: 10px;
 }
 
@@ -3164,6 +3227,7 @@ section {
 .section-download .form-text {
   color: #fff;
   text-align: center;
+  padding-top: 10px;
 }
 
 .section-download .form__subitem {
@@ -3174,6 +3238,14 @@ section {
   padding-left: 0;
   padding-right: 0;
   width: 100%;
+}
+
+.download__form .form__item {
+  justify-content: center;
+}
+
+.download__form input {
+  text-align: center;
 }
 
 .download__main {
@@ -3241,7 +3313,7 @@ section {
 .section-contacts {
   background: #242424;
   color: #fff;
-  padding-top: 6.66667rem;
+  padding-top: 100px;
   color: #fff;
 }
 
@@ -3288,19 +3360,19 @@ section {
 .section-contacts__info {
   display: flex;
   padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 60px;
 }
 
 .section-contacts__image {
   width: 642px;
   position: absolute;
   right: 0;
-  bottom: -48%;
+  bottom: -54%;
 }
 
 .section-contacts__image .circle-image__min .bgimage {
-  padding-top: 40%;
-  width: 40%;
+  padding-top: 29%;
+  width: 29%;
 }
 
 .section-contacts__sep {
@@ -3371,22 +3443,22 @@ footer .container {
   display: flex;
 }
 
-footer ul li {
+footer .footer__catig ul li {
   padding-bottom: 20px;
 }
 
-footer ul li:last-child {
+footer .footer__catig ul li:last-child {
   padding-bottom: 0;
 }
 
-footer ul li a {
+footer .footer__catig ul li a {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   color: #FFFFFF;
 }
 
-footer ul li a:hover {
+footer .footer__catig ul li a:hover {
   text-decoration: underline;
 }
 
@@ -3519,10 +3591,17 @@ footer ul li a:hover {
   background-position: center;
 }
 
+.dragscroll {
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
 .btn {
   color: #000;
   border: none;
-  padding: 1.6em 3em;
+  padding: 1.6em 3em 1.5em 3em;
   color: #fff;
   background: #5D92A3;
   cursor: pointer;
@@ -3532,7 +3611,7 @@ footer ul li a:hover {
   border-radius: none;
   text-transform: uppercase;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.86667rem;
   letter-spacing: 0.05em;
 }
@@ -4654,12 +4733,13 @@ h1 {
 .mobile-menu__nav li a {
   font-style: normal;
   font-weight: normal;
-  font-size: 23px;
+  font-size: 22px;
   line-height: 190%;
   text-align: center;
   color: #FFFFFF;
   text-align: center;
   display: block;
+  padding-bottom: 8px;
 }
 
 .mobile-menu__manager {
@@ -5181,7 +5261,7 @@ h1 {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .hidden {
     margin-right: 17px;
   }
@@ -5225,12 +5305,12 @@ h1 {
     padding-bottom: 3.5rem;
   }
 
-  .section-catalog-park {
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+  .about-park {
+    overflow: hidden;
   }
 
-  .section-general-plan {
+  .section-catalog-park {
+    padding-bottom: 5rem;
     padding-top: 5rem;
   }
 
@@ -5270,11 +5350,6 @@ h1 {
     padding-bottom: 2.5rem;
   }
 
-  .section-video {
-    padding-bottom: 5rem;
-    padding-top: 5rem;
-  }
-
   .section-video__container {
     padding-top: 3rem;
   }
@@ -5292,16 +5367,8 @@ h1 {
     padding-bottom: 5rem;
   }
 
-  .section-contacts {
-    padding-top: 5rem;
-  }
-
   .section-contacts__info {
     padding-top: 3.75rem;
-  }
-
-  .section-contacts__info {
-    padding-bottom: 3rem;
   }
 
   footer {
@@ -5345,10 +5412,6 @@ h1 {
     padding-top: 4.77778rem;
   }
 
-  .section-general-plan {
-    padding-top: 4.77778rem;
-  }
-
   .general-plan__wrp {
     padding-top: 4.77778rem;
   }
@@ -5385,11 +5448,6 @@ h1 {
     padding-bottom: 2.38889rem;
   }
 
-  .section-video {
-    padding-bottom: 4.77778rem;
-    padding-top: 4.77778rem;
-  }
-
   .section-video__container {
     padding-top: 2.86667rem;
   }
@@ -5407,16 +5465,8 @@ h1 {
     padding-bottom: 4.77778rem;
   }
 
-  .section-contacts {
-    padding-top: 4.77778rem;
-  }
-
   .section-contacts__info {
     padding-top: 3.58333rem;
-  }
-
-  .section-contacts__info {
-    padding-bottom: 2.86667rem;
   }
 
   footer {
@@ -5446,8 +5496,12 @@ h1 {
     padding: 0 2.33333rem;
   }
 
-  .section-general-plan {
-    padding-top: 100px !important;
+  .section-about-park .section-title {
+    top: 50px;
+  }
+
+  .section-catalog-park::after {
+    font-size: 200px;
   }
 
   .infr-slider .infr-slider-main {
@@ -5492,10 +5546,6 @@ h1 {
     padding-top: 5.55556rem;
   }
 
-  .section-general-plan {
-    padding-top: 5.55556rem;
-  }
-
   .general-plan__wrp {
     padding-top: 5.55556rem;
   }
@@ -5532,11 +5582,6 @@ h1 {
     padding-bottom: 2.77778rem;
   }
 
-  .section-video {
-    padding-bottom: 5.55556rem;
-    padding-top: 5.55556rem;
-  }
-
   .section-video__container {
     padding-top: 3.33333rem;
   }
@@ -5558,16 +5603,8 @@ h1 {
     padding-bottom: 5.55556rem;
   }
 
-  .section-contacts {
-    padding-top: 5.55556rem;
-  }
-
   .section-contacts__info {
     padding-top: 4.16667rem;
-  }
-
-  .section-contacts__info {
-    padding-bottom: 3.33333rem;
   }
 
   footer {
@@ -5586,9 +5623,17 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .container {
     padding: 0 1.66667rem;
+  }
+
+  .header-top-phone__title {
+    font-size: 15px;
+  }
+
+  .header-top-phone__online {
+    font-size: 11px;
   }
 
   .header-top {
@@ -5610,6 +5655,10 @@ h1 {
     margin-left: -160px;
   }
 
+  .about-park__desc {
+    font-size: 16px;
+  }
+
   .minicard__blur span {
     font-size: 22px;
   }
@@ -5621,6 +5670,10 @@ h1 {
 
   .minicard__props {
     font-size: 11px;
+  }
+
+  .minicard__btn .btn {
+    max-height: 45px;
   }
 
   .minicard__usd {
@@ -5740,12 +5793,20 @@ h1 {
     padding-top: 3.33333rem;
   }
 
+  .section-catalog-park::after {
+    display: none;
+  }
+
   .section-general-plan {
-    padding-top: 3.33333rem;
+    padding-top: 50px;
   }
 
   .general-plan__wrp {
     padding-top: 3.33333rem;
+  }
+
+  .general-plan__image {
+    overflow: auto;
   }
 
   .general-plan__action div {
@@ -5810,11 +5871,6 @@ h1 {
 
   .section-gallery .section-title {
     padding-bottom: 3.33333rem;
-  }
-
-  .section-video {
-    padding-bottom: 3.33333rem;
-    padding-top: 3.33333rem;
   }
 
   .section-video__container {
@@ -5895,15 +5951,11 @@ h1 {
   }
 
   .section-contacts {
-    padding-top: 3.33333rem;
+    padding-top: 60px;
   }
 
   .section-contacts__info {
     padding-top: 3.33333rem;
-  }
-
-  .section-contacts__info {
-    padding-bottom: 3.33333rem;
   }
 
   .section-contacts__image {
@@ -5919,11 +5971,11 @@ h1 {
     flex-wrap: wrap;
   }
 
-  footer ul li {
+  footer .footer__catig ul li {
     padding-bottom: 15px;
   }
 
-  footer ul li a {
+  footer .footer__catig ul li a {
     font-size: 14px;
   }
 
@@ -5988,18 +6040,14 @@ h1 {
 }
 
 @media screen and (max-width: 769px) {
-  .header-top-phone__title {
-    font-size: 15px;
-  }
-
-  .header-top-phone__online {
-    font-size: 11px;
-  }
-
   .header-top-phone__online::before {
     width: 6px;
     height: 6px;
     margin-right: 8px;
+  }
+
+  .header-top__menu span {
+    display: none;
   }
 
   .header-top__msgr {
@@ -6021,10 +6069,6 @@ h1 {
 
   .section-title span {
     font-size: 50px;
-  }
-
-  .section-about-park .section-title {
-    top: 50px;
   }
 
   .about-park__image {
@@ -6343,6 +6387,29 @@ h1 {
     margin-left: -180px;
   }
 
+  .about-park__desc.open p {
+    max-height: none;
+    letter-spacing: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: none;
+    -webkit-box-orient: vertical;
+  }
+
+  .about-park__desc p {
+    max-height: 200px;
+    overflow: hidden;
+    letter-spacing: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .section-general-plan .section-title span {
+    display: flex;
+    justify-content: center;
+  }
+
   .general-plan__action {
     right: 25px;
     left: 25px;
@@ -6353,6 +6420,16 @@ h1 {
     margin-left: 15px;
   }
 
+  .section-sales-team .section-title span {
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sales-team__slider {
+    padding-top: 00px !important;
+  }
+
   .sales-team__image {
     width: 85%;
     z-index: 1;
@@ -6360,6 +6437,15 @@ h1 {
 
   .team-slider-main {
     max-width: 85%;
+  }
+
+  .section-signup .container {
+    min-height: auto;
+  }
+
+  .section-video {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .infrast-item__desc {
@@ -6556,6 +6642,10 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
+  .header-content__info {
+    padding-bottom: 35px;
+  }
+
   .content-info__item {
     display: flex;
     align-items: center;
@@ -6588,8 +6678,18 @@ h1 {
   }
 
   .about-park .circle-image__min .bgimage {
-    padding-top: 70%;
-    width: 70%;
+    padding-top: 50%;
+    width: 50%;
+  }
+
+  .general-plan__action div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .general-plan__action div svg {
+    width: 10px;
+    height: 10px;
   }
 
   .team-slider-main {
@@ -6598,6 +6698,11 @@ h1 {
 
   .signup__subtitle {
     font-size: 16px;
+  }
+
+  .gallery-nav__prev,
+  .gallery-nav__next {
+    display: none;
   }
 
   .infrast-item__text {
@@ -6814,6 +6919,10 @@ h1 {
 
   .content-info__desc {
     font-size: 14px;
+  }
+
+  .sales-team__image {
+    width: 100%;
   }
 
   .section-contacts__map span {

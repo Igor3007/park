@@ -148,7 +148,7 @@ section {
         text-align: right;
         line-height: 100%;
 
-        @media screen and (max-width: $w760) {
+        @media screen and (max-width: $w1024) {
             font-size: 15px;
         }
 
@@ -161,7 +161,7 @@ section {
         align-items: center;
         justify-content: flex-end;
 
-        @media screen and (max-width: $w760) {
+        @media screen and (max-width: $w1024) {
             font-size: 11px;
         }
 
@@ -230,6 +230,10 @@ section {
 
         & span {
             padding-left: 10px;
+
+            @media screen and (max-width: $w760) {
+                display: none;
+            }
         }
     }
 
@@ -359,6 +363,10 @@ section {
     &__info {
         // flex-grow: 1;
         @include padd-bottom(100);
+
+        @media screen and (max-width: $w480) {
+            padding-bottom: 35px;
+        }
     }
 
 
@@ -478,6 +486,9 @@ section {
 }
 
 .catalog-park {
+
+
+
     &__list {
         @include row-flex()
     }
@@ -664,7 +675,7 @@ section {
         position: relative;
         top: 150px;
 
-        @media screen and (max-width: $w760) {
+        @media screen and (max-width: $w1280) {
             top: 50px;
         }
 
@@ -679,10 +690,18 @@ section {
     }
 }
 
+.more-desc span {
+    text-decoration: underline;
+}
+
 .about-park {
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: $w1440) {
+        overflow: hidden;
+    }
 
     @media screen and (max-width: $w480) {
         display: flex;
@@ -723,9 +742,40 @@ section {
 
     &__desc {
         line-height: 180%;
+        font-size: 20px;
+
+        &.open {
+            & p {
+                @media screen and (max-width: $w580) {
+                    max-height: none;
+                    letter-spacing: normal;
+                    display: -webkit-box;
+                    -webkit-line-clamp: none;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+
+
+
+        @media screen and (max-width: $w1024) {
+            font-size: 16px;
+        }
 
         @media screen and (max-width: $w760) {
             padding-top: 50px;
+        }
+
+        @media screen and (max-width: $w580) {
+            & p {
+                max-height: 200px;
+                overflow: hidden;
+                letter-spacing: normal;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
 
         z-index: 5;
@@ -736,8 +786,8 @@ section {
         width: 36%;
 
         @media screen and (max-width: $w480) {
-            padding-top: 70%;
-            width: 70%;
+            padding-top: 50%;
+            width: 50%;
         }
     }
 }
@@ -745,6 +795,7 @@ section {
 .section-catalog-park {
     background: #242424;
     color: #fff;
+    position: relative;
 
     @media screen and (max-width: $w760) {
         background-image: none !important;
@@ -755,7 +806,29 @@ section {
     background-repeat: no-repeat;
     background-position: right top;
 
+    &::after {
+        content: 'Дом';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 400px;
+        line-height: 488px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.02);
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
 
+        @media screen and (max-width: $w1280) {
+            font-size: 200px;
+        }
+
+        @media screen and (max-width: $w940) {
+            display: none;
+        }
+
+    }
 
     & .container {
         max-width: 1260px;
@@ -771,6 +844,9 @@ section {
         & span {
             white-space: nowrap;
             color: rgba(255, 255, 255, 0.03);
+            display: block;
+            display: flex;
+            justify-content: center;
         }
 
         &::after {
@@ -902,7 +978,11 @@ section {
         padding: 20px 20px;
 
         & .btn {
-            max-height: 45px;
+            padding: 1.6em 3em 1.6em 3em;
+
+            @media screen and (max-width: $w1024) {
+                max-height: 45px;
+            }
         }
     }
 
@@ -943,15 +1023,22 @@ section {
 }
 
 .section-general-plan {
-    @include padd-top(100);
+    padding-top: 100px;
 
-    @media screen and (max-width: $w1280) {
-        padding-top: 100px !important;
+    @media screen and (max-width: $w940) {
+        padding-top: 50px;
     }
+
+
 
     & .section-title {
         & span {
             color: rgba(36, 36, 36, 0.1);
+
+            @media screen and (max-width: $w580) {
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
@@ -969,10 +1056,16 @@ section {
 
 
         overflow: hidden;
+        height: 40vw;
+        min-height: 580px;
+
+        @media screen and (max-width: $w940) {
+            overflow: auto;
+        }
 
         & .bgimage {
-            padding-top: 40%;
             @include bgimage-cover;
+            height: 40vw;
             min-height: 580px;
         }
     }
@@ -1014,6 +1107,16 @@ section {
                 & svg {
                     width: 18px;
                     height: 18px;
+                }
+            }
+
+            @media screen and (max-width: $w480) {
+                width: 30px;
+                height: 30px;
+
+                & svg {
+                    width: 10px;
+                    height: 10px;
                 }
             }
 
@@ -1080,6 +1183,12 @@ section {
         & span {
             white-space: nowrap;
             color: rgba(255, 255, 255, 0.03);
+
+            @media screen and (max-width: $w580) {
+                display: block;
+                display: flex;
+                justify-content: center;
+            }
         }
 
         &::after {
@@ -1104,6 +1213,10 @@ section {
             max-width: 580px;
 
         }
+
+        @media screen and (max-width: $w580) {
+            padding-top: 00px !important;
+        }
     }
 
     &__image {
@@ -1121,6 +1234,10 @@ section {
         @media screen and (max-width: $w580) {
             width: 85%;
             z-index: 1;
+        }
+
+        @media screen and (max-width: $w360) {
+            width: 100%;
         }
 
 
@@ -1172,6 +1289,11 @@ section {
 
     display: flex;
     align-items: center;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
 
     & svg {
         fill: transparent;
@@ -1284,10 +1406,18 @@ section {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+
+        @media screen and (max-width: $w580) {
+            min-height: auto;
+        }
     }
 
     & .form__subitem {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        & input {
+            text-align: center;
+        }
 
         & .btn {
             width: 100%;
@@ -1372,7 +1502,6 @@ section {
         font-size: 18px;
         line-height: 22px;
         color: #FFFFFF;
-        text-transform: uppercase;
 
         @media screen and (max-width: $w940) {
             font-size: 15px;
@@ -1386,11 +1515,33 @@ section {
 
     &__prev,
     &__next {
+
+
         & svg {
             fill: transparent;
             stroke: #000;
             width: 60px;
             height: 60px;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            & svg {
+                stroke: #057C85;
+            }
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.4;
+
+            &:hover {
+                cursor: pointer;
+
+                & svg {
+                    stroke: #000;
+                }
+            }
         }
 
         @media screen and (max-width: $w760) {
@@ -1401,6 +1552,14 @@ section {
                 height: 45px;
             }
         }
+
+        @media screen and (max-width: $w480) {
+            display: none;
+        }
+    }
+
+    &__counter {
+        text-align: right
     }
 }
 
@@ -1425,7 +1584,14 @@ section {
 .section-video {
     background: #242424;
     color: #fff;
-    @include padd-x(100);
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media screen and (max-width: $w580) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     & .section-title {
         & h2 {
@@ -1635,7 +1801,7 @@ section {
 
     & .brackets-right,
     & .brackets-left {
-        border: 1px solid #000;
+        border: 1px solid rgba(0, 0, 0, 0.47);
         width: 10px;
 
         @media screen and (max-width: 660px) {
@@ -1724,6 +1890,7 @@ section {
     & .form-text {
         color: #fff;
         text-align: center;
+        padding-top: 10px;
 
         @media screen and (max-width: $w940) {
             max-width: 280px;
@@ -1750,17 +1917,24 @@ section {
 
 .download {
 
+    &__form {
+        & .form__item {
+            justify-content: center;
+        }
+
+        & input {
+            text-align: center
+        }
+    }
 
     &__main {
         @include row-flex;
         align-items: center;
-
         position: relative;
         top: -80px;
 
         @media screen and (max-width: $w940) {
             top: 0;
-
         }
     }
 
@@ -1858,8 +2032,12 @@ section {
 .section-contacts {
     background: #242424;
     color: #fff;
-    @include padd-top(100);
+    padding-top: 100px;
     color: #fff;
+
+    @media screen and (max-width: $w940) {
+        padding-top: 60px;
+    }
 
     & .btn.btn-line {
         border-color: #fff;
@@ -1918,14 +2096,15 @@ section {
         display: flex;
 
         @include padd-top(75);
-        @include padd-bottom(60);
+
+        padding-bottom: 60px;
     }
 
     &__image {
         width: 642px;
         position: absolute;
         right: 0;
-        bottom: -48%;
+        bottom: -54%;
 
         @media screen and (max-width: $w1280) {
             right: -10%;
@@ -1953,8 +2132,8 @@ section {
         }
 
         & .circle-image__min .bgimage {
-            padding-top: 40%;
-            width: 40%;
+            padding-top: 29%;
+            width: 29%;
         }
     }
 
@@ -2066,7 +2245,7 @@ footer {
 
     }
 
-    & ul {
+    & .footer__catig ul {
         & li {
 
             padding-bottom: 20px;
@@ -2311,4 +2490,11 @@ footer {
             background-position: center;
         }
     }
+}
+
+.dragscroll {
+    cursor: grab;
+    cursor: -o-grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
 }
