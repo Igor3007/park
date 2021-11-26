@@ -126,7 +126,7 @@
           </div>
         </div>
       </section>
-      <section class="section-about-park">
+      <section class="section-about-park" id="about">
         <div class="container">
           <div class="section-title"> 
             <h2>О поселке “Ренессанс Парк”</h2><span>О поселке “Ренессанс Парк”</span>
@@ -146,7 +146,7 @@
           </div>
         </div>
       </section>
-      <section class="section-catalog-park" style="background-image: url(../img/common/catalog-bg.png)">
+      <section class="section-catalog-park" id="catalog" style="background-image: url(../img/common/catalog-bg.png)">
         <div class="container">
           <div class="section-title">
             <h2> Дома в поселке “Ренессанс Парк”</h2><span>Дома в поселке “Ренессанс Парк”</span>
@@ -383,7 +383,7 @@
           </div>
         </div>
       </section>
-      <section class="section-general-plan">
+      <section class="section-general-plan" id="general">
         <div class="container">
           <div class="section-title">
             <h2> Генплан поселка</h2><span>Генплан поселка</span>
@@ -420,7 +420,7 @@
           </div>
         </div>
       </section>
-      <section class="section-sales-team">
+      <section class="section-sales-team" id="team">
         <div class="container">
           <div class="section-title">
             <h2> Команда отдела продаж</h2><span>Команда отдела продаж</span>
@@ -441,14 +441,14 @@
                 <div class="team-slider-main">
                   <div class="swiper-container">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-image="/img/common/manager.png">
                         <div class="sales-team-slide">
                           <div class="sales-team-slide__desc">Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  </div>
                           <div class="sales-team-slide__name">Александра</div>
                           <div class="sales-team-slide__spec">Менеджер по продажам</div>
                         </div>
                       </div>
-                      <div class="swiper-slide">
+                      <div class="swiper-slide" data-image="/img/common/signup.jpg">
                         <div class="sales-team-slide">
                           <div class="sales-team-slide__desc">2 Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  </div>
                           <div class="sales-team-slide__name">Александра</div>
@@ -497,7 +497,7 @@
           </div>
         </div>
       </section>
-      <section class="section-gallery">
+      <section class="section-gallery" id="gallery">
         <div class="container-full">
           <div class="section-title">
             <h2> Галерея</h2><span>Галерея</span>
@@ -573,7 +573,7 @@
           </div>
         </div>
       </section>
-      <section class="section-infrastructure">
+      <section class="section-infrastructure" id="infr">
         <div class="container">
           <div class="section-title"> 
             <h2>Инфраструктура</h2><span>Инфраструктура</span>
@@ -640,7 +640,7 @@
           </div>
         </div>
       </section>
-      <section class="section-download" style="background-image: url('../img/common/download-bg.jpg')">
+      <section class="section-download" id="presentation" style="background-image: url('../img/common/download-bg.jpg')">
         <div class="container">
           <div class="download__main">
             <div class="download__image"><span class="bgimage" style="background-image: url(../img/common/laptop.png)"></span>
@@ -672,9 +672,9 @@
           </div>
         </div>
       </section>
-      <section class="section-contacts">
+      <section class="section-contacts" id="map">
         <script>const mapSetting = {
-    'mapPointCoordinats': '55.781950, 37.239939',
+    'mapPointCoordinats': '53.905061990282334,30.343826560943878',
     'mapHintContent': 'Ренессанс Парк',
     'mapBaloonContent': 'Ренессанс Парк',
   }
@@ -721,14 +721,14 @@
         <div class="container">
           <div class="footer__catig">
             <ul>
-              <li><a href="#">О поселке</a></li>
-              <li><a href="#">Дома/участки в поселке</a></li>
-              <li><a href="#">Генплан поселка</a></li>
-              <li><a href="#">Команда отдела продаж</a></li>
-              <li><a href="#">Галерея</a></li>
-              <li><a href="#">Презентация</a></li>
-              <li><a href="#">Инфраструктура</a></li>
-              <li><a href="#">Расположение поселка</a></li>
+              <li><a href="#about">О поселке</a></li>
+              <li><a href="#catalog">Дома/участки в поселке</a></li>
+              <li><a href="#general">Генплан поселка</a></li>
+              <li><a href="#team">Команда отдела продаж</a></li>
+              <li><a href="#gallery">Галерея</a></li>
+              <li><a href="#presentation">Презентация</a></li>
+              <li><a href="#infr">Инфраструктура</a></li>
+              <li><a href="#map">Расположение поселка</a></li>
             </ul>
           </div>
           <div class="footer__info">
@@ -759,18 +759,18 @@
           <div class="mobile-menu__nav">
             <nav>
               <ul> 
-                <li><a href="#">О поселке</a></li>
-                <li><a href="#">Дома/участки в поселке</a></li>
-                <li><a href="#">Генплан поселка</a></li>
-                <li><a href="#">Команда отдела продаж</a></li>
-                <li><a href="#">Галерея</a></li>
-                <li><a href="#">Презентация</a></li>
-                <li><a href="#">Инфраструктура</a></li>
-                <li><a href="#">Расположение поселка</a></li>
+                <li><a href="#about">О поселке</a></li>
+                <li><a href="#catalog">Дома/участки в поселке</a></li>
+                <li><a href="#general">Генплан поселка</a></li>
+                <li><a href="#team">Команда отдела продаж</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#presentation">Презентация</a></li>
+                <li><a href="#infr">Инфраструктура</a></li>
+                <li><a href="#map">Расположение поселка</a></li>
               </ul>
             </nav>
           </div>
-          <div class="mobile-menu__consult">
+          <div class="mobile-menu__consult"> 
             <div class="mobile-menu__manager">
               <div class="menu-manager__photo"> <span class="bgimage" style="background-image: url(../img/common/manager.jpg)"></span>
               </div>

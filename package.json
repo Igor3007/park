@@ -1,10 +1,10 @@
 {
-    "name": "Anex.by",
+    "name": "park",
     "description": "Frontend development with pleasure",
     "author": "promicom",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Igor3007/anex.git"
+        "url": "https://github.com/Igor3007/park.git"
     },
     "license": "MIT",
     "scripts": {
@@ -65,13 +65,14 @@
         "stylelint-selector-bem-pattern": "^2.1.0",
         "webpack": "~4.35.0",
         "webpack-stream": "^5.2.1",
-        "yargs": "~13.2.4"
+        "yargs": "~13.2.4",
+        "smart-grid": "^2.1.2"
+
     },
     "dependencies": {
         "fancybox": "^3.0.1",
         "jquery": "^3.5.1",
-        "smart-grid": "^2.1.2",
-        "svg4everybody": "^2.1.9",
+        "jquery.inputmask": "^3.3.4",
         "swiper": "^6.4.10"
     }
 }

@@ -13,10 +13,29 @@ mixin card-product
                 .swiper-slide: +bgimage('/img/catalog/2.jpg')
                 .swiper-slide: +bgimage('/img/catalog/3.jpg')
                 .swiper-slide: +bgimage('/img/catalog/4.jpg')
+                .swiper-slide: +bgimage('/img/catalog/1.jpg')
+                .swiper-slide: +bgimage('/img/catalog/2.jpg')
+                .swiper-slide: +bgimage('/img/catalog/3.jpg')
+                .swiper-slide: +bgimage('/img/catalog/4.jpg')
+                .swiper-slide: +bgimage('/img/catalog/1.jpg')
+                .swiper-slide: +bgimage('/img/catalog/2.jpg')
+                .swiper-slide: +bgimage('/img/catalog/3.jpg')
+                .swiper-slide: +bgimage('/img/catalog/4.jpg')
             .swiper-dots
+            .swiper-nav-card
+              .swiper-nav-card__prev: +icons('#ic_prev-swiper')
+              .swiper-nav-card__next: +icons('#ic_next-swiper')
           .product-image__thumb
             .swiper-container.image-thumb
               .swiper-wrapper
+                .swiper-slide: +bgimage('/img/catalog/1.jpg')
+                .swiper-slide: +bgimage('/img/catalog/2.jpg')
+                .swiper-slide: +bgimage('/img/catalog/3.jpg')
+                .swiper-slide: +bgimage('/img/catalog/4.jpg')
+                .swiper-slide: +bgimage('/img/catalog/1.jpg')
+                .swiper-slide: +bgimage('/img/catalog/2.jpg')
+                .swiper-slide: +bgimage('/img/catalog/3.jpg')
+                .swiper-slide: +bgimage('/img/catalog/4.jpg')
                 .swiper-slide: +bgimage('/img/catalog/1.jpg')
                 .swiper-slide: +bgimage('/img/catalog/2.jpg')
                 .swiper-slide: +bgimage('/img/catalog/3.jpg')
@@ -38,7 +57,7 @@ mixin card-product
               .product-main__props-download
                 .props-download
                   .props-download__image: a(href='#dl'): +bgimage('../../../img/common/laptop2.png')
-                  .props-download__link: a(href='#dl') Скачать презентацию <span>о проекте</span>
+                  .props-download__link: a(data-modal="" data-type="ajax" data-src="_popup-callback.html") Скачать презентацию <span>о проекте</span>
 
           .product-main__right
             .product-main__order: span Заявка на просмотр

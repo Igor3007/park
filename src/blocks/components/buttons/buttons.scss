@@ -36,6 +36,10 @@
         border: 1px solid #000 !important;
         font-weight: 400 !important;
         text-transform: none !important;
+
+        &:hover {
+            border: 1px solid transparent !important;
+        }
     }
 
     &.btn-line {

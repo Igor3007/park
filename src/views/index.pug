@@ -63,7 +63,7 @@ block content
                     .form__subitem
                       button.btn.btn-blue Получить презентацию
                   .form__item: .form-text Получите презентацию участков от наших экспертов
-  section.section-about-park
+  section.section-about-park(id="about")
     .container
       .section-title 
         h2 О поселке “Ренессанс Парк”
@@ -75,7 +75,7 @@ block content
             .circle-image__min: +bgimage('/img/common/b2.jpg')
         .about-park__desc
           p «Ренессанс Парк» – это филигранно ограненная красота природы и возможность вести активный образ жизни, не замыкаясь в уединении. Дома в стиле европейских аристократических резиденций, собственный пляж с белым кварцевым песком, премиальная инфраструктура других посёлков Villagio Estate – повседневность для жителей «Ренессанс Парк». Жить здесь, значит, окружить себя аурой красоты и здоровья, созданной самой природой. Посёлок вытянут вдоль векового соснового леса, который наполняет окружающее пространство фитонцидами – мощнейшим природным антисептиком, уничтожающим патогенные микроорганизмы. Жители «Ренессанс Парка» ежедневно укрепляют свой иммунитет, просто вдыхая целебный воздух хвойного леса. 
-  section.section-catalog-park(style="background-image: url(../img/common/catalog-bg.png)")
+  section.section-catalog-park(id="catalog" style="background-image: url(../img/common/catalog-bg.png)")
     .container
       .section-title
         h2  Дома в поселке “Ренессанс Парк”
@@ -99,7 +99,7 @@ block content
               .catalog-park__list
                 each item in [2,3,2]
                   .catalog-park__item: +minicard(item)
-  section.section-general-plan
+  section.section-general-plan(id="general")
     .container
       .section-title
         h2  Генплан поселка
@@ -116,7 +116,7 @@ block content
         .circle-image
           .circle-image__big: +bgimage('/img/common/general-plan.jpg')
           .circle-image__min: +bgimage('/img/common/general-plan.jpg')
-  section.section-sales-team
+  section.section-sales-team(id="team")
     .container
       .section-title
         h2  Команда отдела продаж
@@ -131,12 +131,12 @@ block content
             .team-slider-main
               .swiper-container
                 .swiper-wrapper
-                  .swiper-slide
+                  .swiper-slide(data-image="/img/common/manager.png")
                     .sales-team-slide
                       .sales-team-slide__desc Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  
                       .sales-team-slide__name Александра
                       .sales-team-slide__spec Менеджер по продажам
-                  .swiper-slide
+                  .swiper-slide(data-image="/img/common/signup.jpg")
                     .sales-team-slide
                       .sales-team-slide__desc 2 Застройщик проекта Villagio Estate позаботился о высоком качестве домов и окружающих их объектов инфраструктуры. Благодаря клубной системе, владельцам недвижимости в «Ренессанс парке» будет доступно все инфраструктурное наполнение других коттеджных поселков от застройщика: парки, детские сады, английская школа, мед.центр и многое другое. Все объекты клубной системы находятся не дальше, чем в 15 минутах на авто.                  
                       .sales-team-slide__name Александра
@@ -157,7 +157,7 @@ block content
               .form__subitem: input(type="name" placeholder="Имя")
               .form__subitem: input(type="tel" placeholder="+7___-___-__-__")
               .form__subitem: button.btn.btn-blue Отправить
-  section.section-gallery
+  section.section-gallery(id="gallery")
     .container-full
       .section-title
         h2  Галерея
@@ -193,8 +193,7 @@ block content
     .container
       .section-video__container  
         +video('#idyoutube')
-
-  section.section-infrastructure
+  section.section-infrastructure(id="infr")
     .container
       .section-title 
         h2 Инфраструктура
@@ -229,9 +228,7 @@ block content
             .infr-slider-next
               .brackets-right
               .arrow-white: +icons('#ic_next-swiper-blue')
-
-
-  section.section-download(style="background-image: url('../img/common/download-bg.jpg')")
+  section.section-download(id="presentation" style="background-image: url('../img/common/download-bg.jpg')")
     .container
       .download__main
         .download__image: +bgimage('../img/common/laptop.png')
@@ -246,8 +243,7 @@ block content
               .form__subitem: input(type="tel" placeholder="+7___-___-__-__")
               .form__subitem: button.btn.btn-blue Получить презентацию
             .form__item: .form-text Получите презентацию участков от наших экспертов
-
-  section.section-contacts
+  section.section-contacts(id="map")
 
     script
       include ../js/mapsetting.js
@@ -281,14 +277,14 @@ block footer
     .container
       .footer__catig
         ul
-          li: a(href='#') О поселке
-          li: a(href='#') Дома/участки в поселке
-          li: a(href='#') Генплан поселка
-          li: a(href='#') Команда отдела продаж
-          li: a(href='#') Галерея
-          li: a(href='#') Презентация
-          li: a(href='#') Инфраструктура
-          li: a(href='#') Расположение поселка
+          li: a(href='#about') О поселке
+          li: a(href='#catalog') Дома/участки в поселке
+          li: a(href='#general') Генплан поселка
+          li: a(href='#team') Команда отдела продаж
+          li: a(href='#gallery') Галерея
+          li: a(href='#presentation') Презентация
+          li: a(href='#infr') Инфраструктура
+          li: a(href='#map') Расположение поселка
 
       .footer__info
         .footer__info-text Нужна помощь? <br> Позвоните или напишите в чат <br> эксперту проекта
@@ -306,15 +302,15 @@ block footer
       .mobile-menu__nav
         nav
           ul 
-            li: a(href="#") О поселке
-            li: a(href="#") Дома/участки в поселке
-            li: a(href="#") Генплан поселка
-            li: a(href="#") Команда отдела продаж
-            li: a(href="#") Галерея
-            li: a(href="#") Презентация
-            li: a(href="#") Инфраструктура
-            li: a(href="#") Расположение поселка
-      .mobile-menu__consult
+            li: a(href="#about") О поселке
+            li: a(href="#catalog") Дома/участки в поселке
+            li: a(href="#general") Генплан поселка
+            li: a(href="#team") Команда отдела продаж
+            li: a(href="#gallery") Галерея
+            li: a(href="#presentation") Презентация
+            li: a(href="#infr") Инфраструктура
+            li: a(href="#map") Расположение поселка
+      .mobile-menu__consult 
         .mobile-menu__manager
           .menu-manager__photo 
             +bgimage('../img/common/manager.jpg')

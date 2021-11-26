@@ -204,6 +204,7 @@
 
         @media screen and (max-width: $w480) {
             font-size: 14px;
+            padding-bottom: 4px;
         }
     }
 
@@ -251,6 +252,10 @@
         right: 40px;
     }
 
+    @media screen and (max-width: $w580) {
+        right: 20px;
+    }
+
     &__photo {
         margin-right: 20px;
 
@@ -263,6 +268,7 @@
             @media screen and (max-width: $w1024) {
                 width: 50px;
                 height: 50px;
+                margin-right: 0;
             }
 
 

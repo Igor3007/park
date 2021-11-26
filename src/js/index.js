@@ -1,25 +1,22 @@
 import "./import/modules";
 import "./import/components";
-import svgPolyfill from "../../node_modules/svg4everybody/dist/svg4everybody.js";
+
 import Swiper, {
   Pagination,
   Navigation,
   Thumbs,
   Autoplay,
 } from 'swiper';
-svgPolyfill();
+import 'jquery.inputmask/dist/jquery.inputmask.bundle';
 
 import $ from 'jquery';
 import './import/jquery.fancybox.min';
-import './import/list.js';
 import './import/dragscroll.js';
-
 
 $(document).ready(function () {
   $(document).on('click', '.header__phones-btn', function (event) {
     $('.header__phones').toggleClass('open')
   })
-
   
   if($(window).width() < 580){
     $('.about-park__desc').append('<div class="more-desc" ><span>Весь текст</span></div>')
@@ -27,6 +24,13 @@ $(document).ready(function () {
 
   $(document).on('click', '.more-desc',  function(){
     $('.about-park__desc').toggleClass('open')
+
+    if($('.about-park__desc').hasClass('open')){
+      $('.about-park__desc span').text('Свернуть')
+    }else{
+      $('.about-park__desc span').text('Весь текст')
+    }
+
   })
 
   /* zoom image */
@@ -35,8 +39,6 @@ function zoomImage (){
   this.scale = 1,
   this.scaleMax = 5000,
   this.scaleMin = $('.general-plan__image .bgimage').width(),
-  this.axisX = 0,
-  this.axisY = 0,
   this.ch = 0.56, //отношение ширины r dscjnt
   this.mapWidth = $('.general-plan__image .bgimage').width(),
   this.mapHeight = this.mapWidth*this.ch
@@ -57,7 +59,7 @@ function zoomImage (){
     
     if(this.mapWidth < this.scaleMin){
       this.mapWidth = $('.general-plan__image').width()
-      this.mapHeight = $('.general-plan__image').height()
+      this.mapHeight = this.mapWidth*this.ch
     }
     this.zoomRender()
 
@@ -65,21 +67,13 @@ function zoomImage (){
 
   this.zoomRender = function(direction, distance, phase) {
 
-    if(!x) x = 0;
-    if(!y) y = 0;
-
-    if(direction == 'up')  this.axisX =  distance
-    if(direction == 'down')  this.axisX = distance
-    if(direction == 'left')  this.axisY =  distance
-    if(direction == 'right')  this.axisY = distance
-
-    var x = this.axisX;
-    var y = this.axisY;
 
     $('.general-plan__image .bgimage').css({
       width: this.mapWidth + 'px',
       height: this.mapHeight + 'px',
     })
+
+    
 
   }
 }
@@ -119,13 +113,13 @@ $(document).on('click', '.general-plan__zoom-dec', function(event){
     $('.hamburger').on('click', function () {
       $(this).toggleClass('open')
       $('.mobile-menu').toggleClass('open')
-      $('html').toggleClass('hidden')
+      $('html').toggleClass('compensate-for-scrollbar')
     });
 
     $('.mobile-menu__close svg').on('click', function () {
       $('.hamburger').toggleClass('open')
       $('.mobile-menu').toggleClass('open')
-      $('html').toggleClass('hidden')
+      $('html').toggleClass('compensate-for-scrollbar')
     });
 
     //закрыть при клике вне
@@ -139,13 +133,51 @@ $(document).on('click', '.general-plan__zoom-dec', function(event){
 
       }
     });
+
+    $('input[type="tel"]').inputmask({
+      mask:"+9(999)-999-99-99",
+      clearIncomplete: false
+    });
+
+    $('.mobile-menu__nav li a').on('click', function(event){
+      if ($('.hamburger').hasClass('open')) {
+        $('.hamburger').trigger('click')
+      }
+    })
   }
 
+
+  $(document).on('click', '[data-modal=""]', function(){
+
+    const elem = $(this);
+     
+    $.fancybox.open({
+      src  : elem.data('src'),
+      type : 'ajax',
+      opts : {
+        afterShow : function( instance, current ) {
+
+          //init mask
+          $('input[type="tel"]').inputmask({
+            mask:"+9(999)-999-99-99",
+            clearIncomplete: false
+          });
+    
+          //close
+          if ($('.hamburger').hasClass('open')) {
+            $('.hamburger').trigger('click')
+          }
+        }
+      }
+    });
+  })
+
   $('[data-fancybox="catalog"]').fancybox({
+    touch: false,
     afterShow : function( instance, current ) {
       var galleryThumbs = new Swiper('.image-thumb', {
         spaceBetween: 15,
-        slidesPerView: 3,
+        slidesPerView: 4,
         freeMode: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
@@ -154,19 +186,41 @@ $(document).on('click', '.general-plan__zoom-dec', function(event){
       var galleryTop = new Swiper('.image-main', {
         spaceBetween: 10,
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-nav-card__next',
+          prevEl: '.swiper-nav-card__prev',
         },
         pagination: {
           el: '.swiper-dots',
           clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
         },
         thumbs: {
           swiper: galleryThumbs
         }
       });
+
+      //init mask
+      $('input[type="tel"]').inputmask({
+        mask:"+9(999)-999-99-99",
+        clearIncomplete: false
+      });
     }
   });
+
+ 
+
+  //скролл плавный
+    $('a[href*="#"]').on('click', function() {
+
+      var $page = $('html, body');
+      var $heightHeader = $('.header-top').height();
+
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - $heightHeader
+        }, 400);
+        return false;
+    });
 
   /* ууууууууууууу */
   
@@ -249,6 +303,75 @@ var swiper2 = new Swiper('.infr-slider-main .swiper-container', {
 
 });
 
+const imageCache = new function () {
+	var me = this;
+
+	var cache = [];
+	var root = document.location.href.split("/");
+
+	root.pop();
+	root = root.join("/") + "/";
+
+	me.push = function (src, loadEvent) {
+		if (!src.match(/^http/)) {
+			src = root + src;
+		}
+
+		var item = new Image();
+
+		if (cache[src] && loadEvent) {
+			loadEvent(src);
+		} else {
+			if (loadEvent) {
+				item.onload = loadEvent;
+				item.onerror = loadEvent;
+			}
+			cache[src] = item;
+		}
+
+		item.src = src;
+	};
+
+	me.pushArray = function (array, imageLoadEvent, imagesLoadEvent) {
+		var numLoaded = 0;
+		var arrayLength = array.length;
+		for (var i = 0; i < arrayLength; i++) {
+			me.push(array[i], function (e) {
+				if (imageLoadEvent) {
+					imageLoadEvent(e);
+				}
+				numLoaded++;
+				if (numLoaded == arrayLength) {
+					/* setTimeout(function() {
+					  imagesLoadEvent(e);
+					}, 1); */
+				}
+			});
+		}
+	};
+}();
+
+//imageCache.pushArray(array_img);
+
+function CacheImgSlide() {
+
+	let array = [];
+
+	$('.team-slider-main').find('[data-image]').each(function () {
+		array.push($(this).data('image'))
+	})
+
+	imageCache.pushArray(array);
+}
+
+function changeImage (image){
+  
+  $('.sales-team__image .bgimage').css({
+      'background-image': 'url('+image+')'
+  })
+
+}
+
 var swiper3 = new Swiper('.team-slider-main .swiper-container', {
 
   slidesPerView: 1,
@@ -258,10 +381,28 @@ var swiper3 = new Swiper('.team-slider-main .swiper-container', {
     prevEl: '.team-slider-prev',
   },
 
+  on: {
+
+		init: function (data) {
+			const acttiveSlide = data.activeIndex;
+			const circleBig = data.slides[acttiveSlide].dataset.image;
+
+			changeImage(circleBig)
+			CacheImgSlide()
+
+		},
+
+		slideChangeTransitionStart: function (data) {
+			const acttiveSlide = data.activeIndex;
+			const circleBig = data.slides[acttiveSlide].dataset.image;
+
+			changeImage(circleBig)
+			console.log(' change')
+
+		},
+	},
+
 });
-
-
-
 
 
 ymaps.ready(function () {
@@ -281,7 +422,7 @@ ymaps.ready(function () {
       // Создаём макет содержимого.
       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
+      ), 
 
       myPlacemark = new ymaps.Placemark(point, {
         hintContent: mapSetting.mapHintContent,
@@ -290,10 +431,13 @@ ymaps.ready(function () {
         iconLayout: 'default#image',
         iconImageHref: '/img/svg/ic_pen.svg',
         iconImageSize: [60, 60],
-        iconImageOffset: [-60, -30]
+        iconImageOffset: [-30, -60]
       });
 
     myMap.geoObjects.add(myPlacemark);
+    myMap.controls.add('zoomControl');
+    myMap.controls.add('fullscreenControl');
+
   } catch {
 
     console.error('Нет координат для карты');

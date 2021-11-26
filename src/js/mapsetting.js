@@ -1,5 +1,5 @@
 const mapSetting = {
-    'mapPointCoordinats': '55.781950, 37.239939',
+    'mapPointCoordinats': '53.905061990282334,30.343826560943878',
     'mapHintContent': 'Ренессанс Парк',
     'mapBaloonContent': 'Ренессанс Парк',
   }
